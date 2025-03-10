@@ -1,0 +1,1 @@
+create img, fonts, videos folder here if you have assets
