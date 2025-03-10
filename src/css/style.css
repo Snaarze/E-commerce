@@ -198,18 +198,16 @@ main {
 
 .all-products section {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .all-products .shoe-name {
-  margin-top: 20px;
-  margin-left: 20px;
   font-weight: bold;
   color: #333;
 }
 
 .all-products li {
-  flex-grow: 1;
+  flex-basis: 250px;
   margin: 10px;
   background-color: #fff;
   border-radius: 20px;
@@ -225,15 +223,16 @@ main {
 }
 
 .all-products li a div {
-  margin: 10px;
+  margin: 10px 10px;
   display: flex;
-  justify-content: start;
-  flex-wrap: wrap;
 }
 
 .all-products li a div .price {
+  text-align: center;
   border-radius: 20px;
-  padding: 10px;
+  padding-top: 10px;
+  width: 50px;
+  height: 25px;
   background-color: #f0f0f0;
   color: #8079da;
 }
@@ -246,6 +245,10 @@ main {
   color: #7d7d7d;
 }
 
+.all-products li a div .ratings-container {
+  margin: 0;
+}
+
 .product-img {
   background-color: #edeef2;
 }
@@ -254,4 +257,17 @@ main {
   width: auto;
   height: 16px;
   object-fit: cover;
+}
+
+.info-container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
 }
