@@ -2,12 +2,14 @@ import { products } from "./data.js";
 
 const productContainer = document.querySelector(".product-container");
 const categoriesContainer = document.querySelector(".categories ul");
+const productCount = document.querySelector(".product-count");
 
 function renderAllProduct() {
   // remove all the section child if any existing
   while (productContainer.firstChild) {
     productContainer.removeChild(productContainer.firstChild);
   }
+  productCount.textContent = `All Products (${products.length})`;
   //   re-render each item of the products
   createProduct(products);
 }
@@ -100,6 +102,7 @@ function renderSelectedCategory(e) {
   }
 
   const filteredProduct = products.filter((item) => item.brand === liElement);
+  productCount.textContent = `${filteredProduct[0].brand} (${filteredProduct.length})`;
 
   //   // remove all the section child if any existing
   while (productContainer.firstChild) {
