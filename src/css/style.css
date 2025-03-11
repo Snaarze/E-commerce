@@ -1,5 +1,4 @@
 * {
-  outline: dotted 1px red;
   margin: 0;
   padding: 0;
 }
@@ -207,7 +206,7 @@ main {
 }
 
 .all-products li {
-  flex-basis: 250px;
+  flex-basis: 300px;
   margin: 10px;
   background-color: #fff;
   border-radius: 20px;
@@ -216,6 +215,7 @@ main {
 }
 
 .all-products li a {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -270,4 +270,4 @@ main {
 .left-container {
   display: flex;
   flex-direction: column;
-
+}

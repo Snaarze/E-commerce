@@ -1,13 +1,18 @@
 import { products } from "./data.js";
-
+import { user } from "./data.js";
+const cartBtn = document.querySelector(".cart-button");
 const productContainer = document.querySelector(".product-container");
 const categoriesContainer = document.querySelector(".categories ul");
+const productCount = document.querySelector(".product-count");
+
+cartBtn.textContent = `Cart (${user[0].cart.length ? 0 : user[0].cart.length})`;
 
 function renderAllProduct() {
   // remove all the section child if any existing
   while (productContainer.firstChild) {
     productContainer.removeChild(productContainer.firstChild);
   }
+  productCount.textContent = `All Products (${products.length})`;
   //   re-render each item of the products
   createProduct(products);
 }
@@ -62,6 +67,11 @@ function createProduct(array) {
     liContainer.appendChild(productTag);
     infoContainer.appendChild(shoePrice);
     productContainer.appendChild(liContainer);
+
+    // add event for productTag
+    liContainer.addEventListener("click", (e) => {
+      viewProduct(e, item);
+    });
   });
 }
 
@@ -92,7 +102,10 @@ function renderSelectedCategory(e) {
     return;
   }
 
-  let liElement = e.target.closest("li").querySelector("p").textContent.trim();
+  const liElement = e.target
+    .closest("li")
+    .querySelector("p")
+    .textContent.trim();
 
   if (liElement === "All Products") {
     renderAllProduct();
@@ -100,6 +113,7 @@ function renderSelectedCategory(e) {
   }
 
   const filteredProduct = products.filter((item) => item.brand === liElement);
+  productCount.textContent = `${filteredProduct[0].brand} (${filteredProduct.length})`;
 
   //   // remove all the section child if any existing
   while (productContainer.firstChild) {
@@ -109,9 +123,16 @@ function renderSelectedCategory(e) {
   createProduct(filteredProduct);
 }
 
+function viewProduct(e, item) {
+  e.preventDefault();
+  window.location.href = `../html/productView.html?data=${encodeURIComponent(
+    JSON.stringify(item)
+  )}`;
+}
+
 categoriesContainer.addEventListener("click", renderSelectedCategory);
 
 // initial run
 renderCategories();
 renderAllProduct();
-
+console.log(JSON.parse(localStorage.getItem("user")));
