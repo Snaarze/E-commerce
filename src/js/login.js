@@ -12,9 +12,12 @@ loginBtn.forEach((btn) => {
       (users) => users.username === username && users.password === password
     );
     if (isAuth) {
+      localStorage.setItem("user", JSON.stringify(isAuth));
       alert(isAuth.username + " is Logged in");
     } else {
       alert("Wrong Credentials");
     }
   });
 });
+
+export const loggedUser = JSON.parse(localStorage.getItem("user"));

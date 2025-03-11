@@ -34,28 +34,13 @@
                 <input type="text" placeholder="Search Products">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <a href="#"><button class="cart-button"><i class="fa-solid fa-cart-shopping"></i>
-                    Cart (15)</button></a>
+            <a href="../html/cart.html"><i class="fa-solid fa-cart-shopping"></i> <span class="cart-count">Cart
+                    (0)</span></a>
         </form>
         <main>
             <section>
-                <ul>
-                    <li>
-                        <img src="../assets/images/shoe1.png" alt="img-shoe">
-                        <div>
-                            <p>Nike Air Jordan 1</p>
-                            <p class="price">$10</p>
-                        </div>
-                        <div>
-                            <p class="quantity">Quantity</p>
-                            <input type="number">
-                        </div>
-                        <div>
-                            <p>Total Amount</p>
-                            <p class="total-amount">$10</p>
-                        </div>
-                        <a href=""><i class="fa-solid fa-xmark"></i></a></i>
-                    </li>
+                <ul class="cart-list-container">
+
                 </ul>
             </section>
             <div class="shipping-information">
@@ -96,8 +81,7 @@
             </div>
         </main>
     </div>
-
-    <script src="../js/script.js"></script>
+    <script type="module" src="../js/cart.js"></script>
 </body>
 
 </html>

@@ -5,9 +5,7 @@ const productContainer = document.querySelector(".product-container");
 const categoriesContainer = document.querySelector(".categories ul");
 const productCount = document.querySelector(".product-count");
 
-cartBtn.textContent = `Cart (${
-  user[0].cart.length ? 0 : user[0].cart.length - 1
-})`;
+cartBtn.textContent = `Cart (${user[0].cart.length ? 0 : user[0].cart.length})`;
 
 function renderAllProduct() {
   // remove all the section child if any existing
@@ -104,7 +102,10 @@ function renderSelectedCategory(e) {
     return;
   }
 
-  let liElement = e.target.closest("li").querySelector("p").textContent.trim();
+  const liElement = e.target
+    .closest("li")
+    .querySelector("p")
+    .textContent.trim();
 
   if (liElement === "All Products") {
     renderAllProduct();
@@ -122,12 +123,11 @@ function renderSelectedCategory(e) {
   createProduct(filteredProduct);
 }
 
-function viewProduct(e, itemName) {
+function viewProduct(e, item) {
   e.preventDefault();
-
-  window.location.href = `../html/productView.html?data=${user}`;
-  console.log("test");
-  console.log(itemName);
+  window.location.href = `../html/productView.html?data=${encodeURIComponent(
+    JSON.stringify(item)
+  )}`;
 }
 
 categoriesContainer.addEventListener("click", renderSelectedCategory);
@@ -135,4 +135,4 @@ categoriesContainer.addEventListener("click", renderSelectedCategory);
 // initial run
 renderCategories();
 renderAllProduct();
-
+console.log(JSON.parse(localStorage.getItem("user")));
