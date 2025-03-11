@@ -1,0 +1,20 @@
+.nikelogo {
+    width: 100px;
+}
+
+.new-member-register {
+    text-decoration: none;
+}
+
+.w-100 {
+    background-color: #0A58CA;
+    padding: 10px;
+    border-style: none;
+    color: white;
+    border-radius: 10px;
+}
+
+.btn-close {
+    position: absolute;
+    right: 1rem;
+}
