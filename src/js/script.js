@@ -1,8 +1,13 @@
 import { products } from "./data.js";
-
+import { user } from "./data.js";
+const cartBtn = document.querySelector(".cart-button");
 const productContainer = document.querySelector(".product-container");
 const categoriesContainer = document.querySelector(".categories ul");
 const productCount = document.querySelector(".product-count");
+
+cartBtn.textContent = `Cart (${
+  user[0].cart.length ? 0 : user[0].cart.length - 1
+})`;
 
 function renderAllProduct() {
   // remove all the section child if any existing
@@ -64,6 +69,11 @@ function createProduct(array) {
     liContainer.appendChild(productTag);
     infoContainer.appendChild(shoePrice);
     productContainer.appendChild(liContainer);
+
+    // add event for productTag
+    liContainer.addEventListener("click", (e) => {
+      viewProduct(e, item);
+    });
   });
 }
 
@@ -110,6 +120,14 @@ function renderSelectedCategory(e) {
   }
 
   createProduct(filteredProduct);
+}
+
+function viewProduct(e, itemName) {
+  e.preventDefault();
+
+  window.location.href = `../html/productView.html?data=${user}`;
+  console.log("test");
+  console.log(itemName);
 }
 
 categoriesContainer.addEventListener("click", renderSelectedCategory);

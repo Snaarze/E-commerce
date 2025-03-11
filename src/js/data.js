@@ -3,7 +3,16 @@ export const user = [
     username: "user123",
     password: "userpassword",
     usertype: "user",
-    cart: [],
+    cart: [
+      {
+        id: 0,
+        itemName: "Nike Jordan V1",
+        sizes: ["small", "medium", "large"],
+        price: 100,
+        quantity: 100,
+        brand: "Nike",
+      },
+    ],
   },
   {
     username: "admin123",
