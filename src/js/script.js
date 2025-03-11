@@ -135,3 +135,4 @@ categoriesContainer.addEventListener("click", renderSelectedCategory);
 // initial run
 renderCategories();
 renderAllProduct();
+

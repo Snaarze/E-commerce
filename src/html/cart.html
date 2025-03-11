@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <aside>
+        <ul>
+            <li><img src="../assets/images/Nike-Logo.png" alt="logo"></li>
+            <li><a href=""><i class="fa-solid fa-bars"></i></a></li>
+        </ul>
+    </aside>
+    <div class="container">
+        <header>
+            <ul>
+                <li><img src="../assets/images/Nike-Logo.png" alt="shoe logo">
+                    <p>Let's order fresh items for you</p>
+                </li>
+                <li>
+                    <a href="#"><button><img src="" alt="Profile Icon"></button></a>
+                </li>
+            </ul>
+        </header>
+        <form>
+            <div>
+                <input type="text" placeholder="Search Products">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <a href="#"><button class="cart-button"><i class="fa-solid fa-cart-shopping"></i>
+                    Cart (15)</button></a>
+        </form>
+        <main>
+            <section>
+                <ul>
+                    <li>
+                        <img src="../assets/images/shoe1.png" alt="img-shoe">
+                        <div>
+                            <p>Nike Air Jordan 1</p>
+                            <p class="price">$10</p>
+                        </div>
+                        <div>
+                            <p class="quantity">Quantity</p>
+                            <input type="number">
+                        </div>
+                        <div>
+                            <p>Total Amount</p>
+                            <p class="total-amount">$10</p>
+                        </div>
+                        <a href=""><i class="fa-solid fa-xmark"></i></a></i>
+                    </li>
+                </ul>
+            </section>
+            <div class="shipping-information">
+                <ul>
+                    <div>
+                        <h4>Shipping Information</h4>
+                        <li>
+                            <input type="text" placeholder="First Name">
+                            <input type="text" placeholder="Last Name">
+                        </li>
+                        <li><input type="text" placeholder="Address"></li>
+                        <li><input type="text" placeholder="Address 2"></li>
+                        <li>
+                            <input type="text" placeholder="City">
+                            <input type="text" placeholder="State">
+                            <input type="text" placeholder="ZIP Code">
+                        </li>
+                    </div>
+                    <div class="order-summary">
+                        <h4>Order Summary</h4>
+                        <li>
+                            <p>Items</p>
+                            <p>$40</p>
+                        </li>
+                        <li class="shipping-fee">
+                            <p>Shipping Fee</p>
+                            <p>$5</p>
+                        </li>
+                        <li>
+                            <p>Total Amount</p>
+                            <p>$45</p>
+                        </li>
+                    </div>
+                    <div class="checkout">
+                        <a href="">Proceed to Checkout</a>
+                    </div>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
