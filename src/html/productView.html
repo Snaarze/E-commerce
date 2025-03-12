@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/productView.css">
+
 </head>
 
 <body>
@@ -21,9 +22,14 @@
             <li><img src="../assets/images/Nike-Logo.png" alt="shoe logo">
                 <p>Let's order fresh items for you</p>
             </li>
-            <li>
-                <a href="#"><button>Signup</button></a>
-                <a href="#"><button class="login-btn">Login</button></a>
+            <li class="btn-interaction">
+                <button class="signup-btn">Signup</button>
+                <button class="login-btn">Login</button>
+            </li>
+            <li class="hide-btn logged-container">
+                <img src="" alt="test">
+                <span class="email-logged"></span>
+                <button class="logout-btn">Log out</button>
             </li>
         </ul>
     </header>
@@ -42,15 +48,13 @@
         <a href="../html/index.html" class="product-link-count"></a>
         <section class="product-container">
             <div class="product-left-container">
-                <img src="../assets/images/adidas.png" alt="">
-                <ul>
-                    <li>
-                        <img src="../assets/images/adidas.png" alt="">
-                    </li>
-                    <li> <img src="../assets/images/adidas.png" alt=""></li>
-                    <li> <img src="../assets/images/adidas.png" alt=""></li>
-                    <li> <img src="../assets/images/adidas.png" alt=""></li>
-                </ul>
+                <img src="../assets/images/adidas.png" alt="" class="main-product">
+                <div class="other-img-container">
+                    <img src="../assets/images/all-product-icon.png" alt="">
+                    <img src="../assets/images/Nike-Logo.png" alt="">
+                    <img src="../assets/images/adidas.png" alt="">
+                    <img src="../assets/images/adidas.png" alt="">
+                </div>
             </div>
             <div class="product-right-container">
                 <h3 class="product-name"> Vegetables</h3>
@@ -70,7 +74,7 @@
                 <ul>
                     <li class="product-action-container">
                         <label for="quantity">Quantity</label>
-                        <input type="number" name="quantity" id="quantity">
+                        <input type="number" name="quantity" id="quantity" value="1" min="0">
                     </li>
                     <li class="product-action-container">
                         <span>Total Amount : </span>
@@ -85,8 +89,8 @@
         </section>
         <section class="similar-items-container">
             <h4>Similar Items</h4>
-            <ul>
-                <li>
+            <ul class="similar-container">
+                <!-- <li>
                     <img src="../assets/images/adidas.png" alt="">
                     <div class="item-info-container">
                         <div class="info-left-container">
@@ -102,11 +106,45 @@
                         </div>
                         <p class="similar-item-price"> $10</p>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </section>
     </main>
-    <script type="module" src="../js/login.js"></script>
+
+    <!-- dialog form for login -->
+    <dialog class="login-form">
+        <div class="modal-body p-3">
+            <button type="button" class="btn-close close-form-btn"></button>
+            <div class="row">
+                <div class="col-12 p-5">
+                    <div class="modalLogin row">
+                        <img src="../assets/images/Nike-Logo.png" alt="Logo" class="nike-logo">
+                        <div class="col-12 d-flex justify-content-between my-4">
+                            <h6>
+                                <i class="fa-regular fa-face-smile"></i> Login to order
+                            </h6>
+                            <a href="" class="new-member-register">New Member? Register here.</a>
+                        </div>
+                        <div class="col-12 mt-2 mb-5">
+                            <div class="mb-3">
+                                <label for="email_login" class="form-label">Email
+                                </label>
+                                <input type="email" class="form-control" id="email_login" placeholder="Email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password_login" class="form-label">Password
+                                </label>
+                                <input type="email" class="form-control" id="password_login" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <button class="w-100 submit-btn">Sign In</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>
     <script type="module" src="../js/productView.js"></script>
 </body>
 

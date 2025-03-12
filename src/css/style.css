@@ -3,6 +3,24 @@
   padding: 0;
 }
 
+.hide-btn {
+  display: none !important;
+}
+
+.logged-container {
+  display: flex;
+}
+
+dialog {
+  height: 800px;
+  width: 700px;
+  position: fixed;
+  top: 5%;
+  left: 35%;
+  border: none;
+  border-radius: 25px;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
