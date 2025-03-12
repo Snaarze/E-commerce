@@ -32,7 +32,8 @@ logoutBtn.forEach((btn) => {
   });
 });
 
-submitBtn.addEventListener("click", () => {
+submitBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   const isAuth = user.find(
     (users) =>
       users.email === emailInput.value && users.password === passwordInput.value
