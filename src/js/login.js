@@ -14,6 +14,7 @@ const signupModalBtn = document.querySelector(".signup-modal-btn");
 const signupForm = document.querySelector(".signup-form");
 const memberBtn = document.querySelector(".member-btn");
 const closeSignupBtn = document.querySelectorAll(".close-signup-btn");
+
 loginBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     openForm.showModal();

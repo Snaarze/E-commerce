@@ -53,6 +53,8 @@ function createCartList() {
     const liContainer = document.createElement("li");
     const img = document.createElement("img");
     img.alt = `Item ${index}`;
+    img.src = item.src;
+    console.log(item);
     liContainer.appendChild(img);
 
     // create a container for price and item Name
@@ -94,6 +96,7 @@ function createCartList() {
     // create remove button
     const removeButton = document.createElement("button");
     const buttonIcon = document.createElement("i");
+    removeButton.classList.add("remove-btn");
     buttonIcon.classList.add("fa-solid", "fa-xmark");
     removeButton.appendChild(buttonIcon);
     liContainer.appendChild(removeButton);
