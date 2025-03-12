@@ -28,12 +28,11 @@ function displayProduct() {
   productCount.textContent = ` << All Products (${products.length})`;
   productName.textContent = `${itemData.itemName}`;
   productPrice.textContent = `${itemData.price}`;
+  mainImg.src = itemData.imgSrc[0];
   productRating.textContent = ` ${itemData.ratingCount} Ratings`;
   productQuantity.setAttribute("max", `${itemData.quantity}`);
-  console.log(itemData.quantity);
 
   // attach img to preview
-  console.log(itemData.imgSrc);
   frontView.src = itemData.imgSrc[0];
   sideView.src = itemData.imgSrc[1];
   topView.src = itemData.imgSrc[2];
@@ -191,9 +190,7 @@ addCartBtn.addEventListener("click", addCart);
 
 productOtherImg.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    let copyOfImg = mainImg.src;
     mainImg.src = e.target.src;
-    e.target.src = copyOfImg;
   });
 });
 
