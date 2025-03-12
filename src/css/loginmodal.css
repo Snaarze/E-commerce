@@ -1,29 +1,22 @@
 /* login-modal-dialog */
-* {
-  padding: 0;
-}
 
-body {
-  font-family: sans-serif;
-}
-
-dialog {
+.login-form {
   width: 500px;
   border: 1px gray solid;
   border-radius: 10px;
   box-shadow: 0px 0px 0px 0.3px;
 }
 
-dialog header {
+.login-form header {
   display: flex;
   justify-content: space-between;
 }
 
-dialog header img {
+.login-form header img {
   width: 80px;
 }
 
-dialog header button {
+.login-form header button {
   border-radius: 100%;
   height: 30px;
   width: 30px;
@@ -32,52 +25,52 @@ dialog header button {
   color: red;
 }
 
-dialog section {
+.login-form section {
   margin: 40px;
 }
 
-dialog section ul {
+.login-form section ul {
   display: flex;
   justify-content: space-between;
 }
 
-dialog section ul li {
+.login-form section ul li {
   gap: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-dialog section ul li button {
+.login-form section ul li button {
   border: none;
   background-color: white;
   text-decoration: underline;
 }
 
-dialog form {
+.login-form form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-dialog form li {
+.login-form form li {
   display: flex;
   flex-direction: column;
 }
 
-dialog form li p {
+.login-form form li p {
   font-size: small;
   margin: 0;
   padding: 5px;
 }
 
-dialog form li input {
+.login-form form li input {
   border-radius: 10px;
   padding: 10px;
   border: 1px solid gray;
 }
 
-dialog form button {
+.login-form form button {
   margin-top: 50px;
   padding: 10px;
   border-radius: 10px;
@@ -86,79 +79,72 @@ dialog form button {
 }
 
 /* register-modal-dialog */
-/* * {
-    padding: 0;
+
+.signup-form {
+  width: 500px;
+  border: 1px gray solid;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 0.3px;
 }
 
-body {
-    font-family: sans-serif;
+.signup-form header {
+  display: flex;
+  justify-content: space-between;
 }
 
-dialog {
-    width: 500px;
-    border: 1px gray solid;
-    border-radius: 10px;
-    box-shadow: 0px 0px 0px 0.3px;
+.signup-form header img {
+  width: 80px;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
+.signup-form header button {
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  background: #c0b4ae50;
+  border-style: none;
+  color: red;
 }
 
-header img {
-    width: 80px;
+.signup-form section {
+  margin: 40px;
 }
 
-header button {
-    border-radius: 100%;
-    height: 30px;
-    width: 30px;
-    background: #c0b4ae50;
-    border-style: none;
-    color: red;
+.signup-form section ul {
+  display: flex;
+  justify-content: space-between;
 }
 
-section {
-    margin: 40px;
+.signup-form section ul li {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-section ul {
-    display: flex;
-    justify-content: space-between;
+.signup-form section ul li button {
+  border-style: none;
+  background-color: white;
+  text-decoration: underline;
 }
 
-section ul li {
-    gap: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.signup-form form ul {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
 }
 
-section ul li button {
-    border-style: none;
-    background-color: white;
-    text-decoration: underline;
+.signup-form form ul li input {
+  border: 1px solid gray;
+  border-radius: 10px;
+  display: flex;
+  width: 100%;
+  padding: 10px;
 }
 
-form ul {
-    display: flex;
-    gap: 15px;
-    flex-direction: column;
+.signup-form form button {
+  margin-top: 40px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
 }
-
-form ul li input {
-    border: 1px solid gray;
-    border-radius: 10px;
-    display: flex;
-    width: 100%;
-    padding: 10px;
-}
-
-form button {
-    margin-top: 40px;
-    border: 1px solid gray;
-    border-radius: 10px;
-    padding: 10px;
-    width: 100%;
-} */

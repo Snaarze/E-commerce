@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/loginmodal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,7 +20,7 @@
         </ul>
     </aside>
     <div class="container">
-        <header class="header-title">
+        <header>
             <ul>
                 <li><img src="../assets/images/Nike-Logo.png" alt="shoe logo">
                     <p>Let's order fresh items for you</p>
@@ -35,7 +36,7 @@
                 </li>
             </ul>
         </header>
-        <form class="form-title">
+        <form>
             <div>
                 <input type="text" placeholder="Search Products">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -45,7 +46,10 @@
         <main>
             <section>
                 <ul class="cart-list-container">
-
+                    <li class="no-cart-item">
+                        There are no items in this cart
+                        <a href="../html/index.html">Continue shopping</a>
+                    </li>
                 </ul>
             </section>
             <div class="shipping-information">
@@ -87,36 +91,70 @@
         </main>
         <!-- dialog form for login -->
         <dialog class="login-form">
-            <div class="modal-body p-3">
-                <button type="button" class="btn-close close-form-btn"></button>
-                <div class="row">
-                    <div class="col-12 p-5">
-                        <div class="modalLogin row">
-                            <img src="../assets/images/Nike-Logo.png" alt="Logo" class="nike-logo">
-                            <div class="col-12 d-flex justify-content-between my-4">
-                                <h6>
-                                    <i class="fa-regular fa-face-smile"></i> Login to order
-                                </h6>
-                                <a href="" class="new-member-register">New Member? Register here.</a>
-                            </div>
-                            <div class="col-12 mt-2 mb-5">
-                                <div class="mb-3">
-                                    <label for="email_login" class="form-label">Email
-                                    </label>
-                                    <input type="email" class="form-control" id="email_login" placeholder="Email">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="password_login" class="form-label">Password
-                                    </label>
-                                    <input type="email" class="form-control" id="password_login" placeholder="Password">
-                                </div>
-                            </div>
-                            <div class="col-12 mt-4">
-                                <button class="w-100 submit-btn">Sign In</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="container">
+                <section>
+                    <header>
+                        <img src="../assets/images/Nike-Logo.png" alt="">
+                        <button class="close-form-btn">X</button>
+                    </header>
+                    <ul>
+                        <li>
+                            <i class="fa-regular fa-face-smile"></i>
+                            <p>Login to order</p>
+                        </li>
+                        <li>
+                            <button class="signup-modal-btn">New Member? Register here.</button>
+                        </li>
+                    </ul>
+                    <form>
+                        <li>
+                            <p>Email</p>
+                            <input type="text" placeholder="Email Address" id="email_login">
+                        </li>
+                        <li>
+                            <input type="text" placeholder="Password" id="password_login">
+                        </li>
+                        <button class="submit-btn">Sign In</button>
+                    </form>
+                </section>
+            </div>
+        </dialog>
+
+        <dialog class="signup-form">
+            <div class="container">
+                <section>
+                    <header>
+                        <img src="../assets/images/Nike-Logo.png" alt="">
+                        <button class="close-signup-btn">X</button>
+                    </header>
+                    <ul>
+                        <li>
+                            <i class="fa-regular fa-face-smile"></i>
+                            <p>Login to order</p>
+                        </li>
+                        <li>
+                            <button class="member-btn">Already a member? Login here.</button>
+                        </li>
+                    </ul>
+                    <form>
+                        <ul>
+                            <li>
+                                <input type="text" placeholder="Firstname">
+                                <input type="text" placeholder="Firstname">
+                            </li>
+                            <li>
+                                <input type="email" placeholder="Email">
+                            </li>
+                            <li>
+                                <input type="password" placeholder="Password">
+                            </li>
+                            <li>
+                                <input type="password" placeholder="Confirm Password">
+                            </li>
+                        </ul>
+                        <button>Sign Up</button>
+                    </form>
+                </section>
             </div>
         </dialog>
     </div>

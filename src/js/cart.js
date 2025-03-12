@@ -12,11 +12,34 @@ const findUserIndex = user.findIndex(
 function displayUserCart() {
   user[findUserIndex] = loggedUser;
   updateCartCount();
+
+  while (cartListContainer.firstChild) {
+    cartListContainer.removeChild(cartListContainer.firstChild);
+  }
+
   if (loggedUser) {
     createCartList();
   }
+
+  if (!loggedUser || loggedUser.cart.length === 0) {
+    createEmptyList();
+  }
   updateOrderSummary();
+  updateCartCount();
   console.log(user[findUserIndex]);
+}
+
+function createEmptyList() {
+  const createLi = document.createElement("li");
+  const anchor = document.createElement("a");
+  anchor.textContent = "Continue Shopping";
+  anchor.href = "../html/index.html";
+
+  createLi.textContent = "There are no item in this cart";
+  createLi.classList.add("no-cart-item");
+
+  createLi.appendChild(anchor);
+  cartListContainer.appendChild(createLi);
 }
 
 function updateCartCount() {
@@ -100,8 +123,7 @@ function removeItem(e) {
   localStorage.setItem("user", JSON.stringify(user[findUserIndex]));
 
   grandParentElement.removeChild(selectedParentElement);
-  updateOrderSummary();
-  updateCartCount();
+  displayUserCart();
 }
 
 function updateOrderSummary() {

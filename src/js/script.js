@@ -27,7 +27,7 @@ function createProduct(array) {
     const liContainer = document.createElement("li");
     const productTag = document.createElement("a");
     const img = document.createElement("img");
-    img.src = "../assets/images/shoe1.png";
+    img.src = item.imgSrc[0];
     img.classList.add("product-img");
 
     const infoContainer = document.createElement("div");
