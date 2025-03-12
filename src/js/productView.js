@@ -14,6 +14,11 @@ const productOtherImg = document.querySelectorAll(
 );
 const similarContainer = document.querySelector(".similar-container");
 
+// view of image selectors
+const frontView = document.querySelector(".front-view");
+const sideView = document.querySelector(".side-view");
+const backView = document.querySelector(".back-view");
+const topView = document.querySelector(".top-view");
 // initial  render
 function displayProduct() {
   const params = new URLSearchParams(window.location.search);
@@ -23,9 +28,15 @@ function displayProduct() {
   productCount.textContent = ` << All Products (${products.length})`;
   productName.textContent = `${itemData.itemName}`;
   productPrice.textContent = `${itemData.price}`;
+  mainImg.src = itemData.imgSrc[0];
   productRating.textContent = ` ${itemData.ratingCount} Ratings`;
   productQuantity.setAttribute("max", `${itemData.quantity}`);
-  console.log(itemData.quantity);
+
+  // attach img to preview
+  frontView.src = itemData.imgSrc[0];
+  sideView.src = itemData.imgSrc[1];
+  topView.src = itemData.imgSrc[2];
+  backView.src = itemData.imgSrc[3];
 
   productQuantity.addEventListener("input", (e) => {
     const changeLimitValue = loggedUser.cart.find(
@@ -179,9 +190,7 @@ addCartBtn.addEventListener("click", addCart);
 
 productOtherImg.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    let copyOfImg = mainImg.src;
     mainImg.src = e.target.src;
-    e.target.src = copyOfImg;
   });
 });
 

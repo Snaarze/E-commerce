@@ -21,285 +21,213 @@ export const user = [
 ];
 
 export const products = [
-  // Nike
+  // ADIDAS MEN
   {
     id: 0,
-    itemName: "Nike Jordan V1",
-    sizes: ["small", "medium", "large"],
-    price: 100,
+    itemName: "Samba OG Shoes",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: 6800,
     quantity: 100,
-    brand: "Nike",
+    brand: "Adidas",
     ratingCount: 250,
+    description:
+      "Born on the pitch, the Samba is a timeless icon of street style. This silhouette stays true to its legacy with a tasteful, low-profile, soft leather upper, suede overlays, and gum sole, making it a staple in everyone's closet - on and off the pitch.",
+    imgSrc: [
+      "../assets/images/ADIDAS-MEN-1.avif", // Front view
+      "../assets/images/ADIDAS-MEN-1.2.avif", // Side view
+      "../assets/images/ADIDAS-MEN-1.3.avif", // Back view
+      "../assets/images/ADIDAS-MEN-1.4.avif", // Top view
+    ],
   },
   {
     id: 1,
-    itemName: "Nike Air Max 270",
-    sizes: ["small", "medium", "large"],
-    price: 130,
-    quantity: 90,
-    brand: "Nike",
-    ratingCount: 210,
+    itemName: "Samba Adizero Adios Pro 4 Shoes",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: 13000,
+    quantity: 100,
+    brand: "Adidas",
+    ratingCount: 250,
+    description:
+      "Proven to be the world's most winning shoe, the Adizero Adios Pro line is the pinnacle of Adizero Racing shoes. The Adios Pro 4 is made for fast runners who want to experience faster, with enhanced features designed to optimize running efficiency. ",
+    imgSrc: [
+      "../assets/images/ADIDAS-MEN-2.avif", // Front view
+      "../assets/images/ADIDAS-MEN-2.2.avif", // Side view
+      "../assets/images/ADIDAS-MEN-2.3.avif", // Back view
+      "../assets/images/ADIDAS-MEN-2.4.avif", // Top view
+    ],
   },
   {
     id: 2,
-    itemName: "Nike Air Zoom Pegasus 37",
-    sizes: ["small", "medium", "large"],
-    price: 120,
-    quantity: 80,
-    brand: "Nike",
-    ratingCount: 180,
+    itemName: "Superstar 82 Shoes",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: 9000,
+    quantity: 100,
+    brand: "Adidas",
+    ratingCount: 250,
+    description:
+      "The iconic silhouette gets done up with a real denim upper, and goes even further with stitched detailing throughout to mimic chain-stitching on truly premium denim silhouettes.",
+    imgSrc: [
+      "../assets/images/ADIDAS-MEN-3.avif", // Front view
+      "../assets/images/ADIDAS-MEN-3.2.avif", // Side view
+      "../assets/images/ADIDAS-MEN-3.3.avif", // Back view
+      "../assets/images/ADIDAS-MEN-3.4.avif", // Top view
+    ],
   },
   {
     id: 3,
-    itemName: "Nike React Infinity Run Flyknit",
-    sizes: ["small", "medium", "large"],
-    price: 150,
-    quantity: 70,
-    brand: "Nike",
-    ratingCount: 200,
+    itemName: "Ultraboost 1.0 Fortnite Shoes",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: 10000,
+    quantity: 100,
+    brand: "Adidas",
+    ratingCount: 250,
+    description:
+      "Adidas x Fortnite shoes made for supreme, daily comfort. You're always in game mode with these ultra-comfortable shoes, part of a collaboration between adidas and Fortnite.",
+    imgSrc: [
+      "../assets/images/ADIDAS-MEN-4.avif", // Front view
+      "../assets/images/ADIDAS-MEN-4.2.avif", // Side view
+      "../assets/images/ADIDAS-MEN-4.3.avif", // Back view
+      "../assets/images/ADIDAS-MEN-4.4.avif", // Top view
+    ],
   },
   {
     id: 4,
-    itemName: "Nike Free RN 5.0",
-    sizes: ["small", "medium", "large"],
-    price: 110,
-    quantity: 90,
-    brand: "Nike",
-    ratingCount: 220,
+    itemName: "Harden Volume 9 Shoes",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: 9500,
+    quantity: 100,
+    brand: "Adidas",
+    ratingCount: 250,
+    description:
+      "Continuing to build on his legend and legacy, the latest signature shoes from James Harden and adidas Basketball are designed for players who live for the game's biggest moments.",
+    imgSrc: [
+      "../assets/images/ADIDAS-MEN-5.avif", // Front view
+      "../assets/images/ADIDAS-MEN-5.2.avif", // Side view
+      "../assets/images/ADIDAS-MEN-5.3.avif", // Back view
+      "../assets/images/ADIDAS-MEN-5.4.avif", // Top view
+    ],
   },
 
-  // Adidas
+  //ADIDAS WOMEN
   {
     id: 5,
-    itemName: "Adidas Ultraboost 22",
-    sizes: ["medium", "large"],
-    price: 120,
-    quantity: 75,
+    itemName: "Samba OG Shoes",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: 6800,
+    quantity: 100,
     brand: "Adidas",
-    ratingCount: 180,
+    ratingCount: 250,
+    description:
+      "The adidas Samba OG Shoes are a casual icon reimagined for sunny, fair weather days. The breathable cotton mesh upper keeps you cool while suede overlays add structure and durability over the toe and along the laces.",
+    imgSrc: [
+      "../assets/images/ADIDAS-WOMEN-1.avif", // Front view
+      "../assets/images/ADIDAS-WOMEN-1.2.avif", // Side view
+      "../assets/images/ADIDAS-WOMEN-1.3.avif", // Back view
+      "../assets/images/ADIDAS-WOMEN-1.4.avif", // Top view
+    ],
   },
   {
     id: 6,
-    itemName: "Adidas NMD_R1",
-    sizes: ["medium", "large"],
-    price: 110,
-    quantity: 140,
+    itemName: "Adizero Adios Pro 4 Shoes",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: 13000,
+    quantity: 100,
     brand: "Adidas",
-    ratingCount: 220,
+    ratingCount: 250,
+    description:
+      "Proven to be the world's most winning shoe, the Adizero Adios Pro line is the pinnacle of Adizero Racing shoes. The Adios Pro 4 is made for fast runners who want to experience faster, with enhanced features designed to optimize running efficiency. ",
+    imgSrc: [
+      "../assets/images/ADIDAS-WOMEN-2.avif", // Front view
+      "../assets/images/ADIDAS-WOMEN-2.2.avif", // Side view
+      "../assets/images/ADIDAS-WOMEN-2.3.avif", // Back view
+      "../assets/images/ADIDAS-WOMEN-2.4.avif", // Top view
+    ],
   },
   {
     id: 7,
-    itemName: "Adidas Yeezy Boost 350",
-    sizes: ["medium", "large"],
-    price: 220,
-    quantity: 50,
+    itemName: "Handball Spezial Shoes",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: 5800,
+    quantity: 100,
     brand: "Adidas",
-    ratingCount: 150,
+    ratingCount: 250,
+    description:
+      "This low-profile trainer brings energy and comfort to your style game. Originally designed for fast-paced indoor sports, these adidas Handball Spezial Shoes playing days are done but keep your style game strong. Crafted for comfort, their leather and textile upper surrounds a synthetic lining.",
+    imgSrc: [
+      "../assets/images/ADIDAS-WOMEN-3.avif", // Front view
+      "../assets/images/ADIDAS-WOMEN-3.2.avif", // Side view
+      "../assets/images/ADIDAS-WOMEN-3.3.avif", // Back view
+      "../assets/images/ADIDAS-WOMEN-3.4.avif", // Top view
+    ],
   },
   {
     id: 8,
-    itemName: "Adidas Stan Smith",
-    sizes: ["small", "medium", "large"],
-    price: 85,
+    itemName: "Taekwondo Shoes",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: 6500,
     quantity: 100,
     brand: "Adidas",
-    ratingCount: 270,
+    ratingCount: 250,
+    description:
+      "Minimal, super low-profile trainers crafted from soft, supple leather. Slip into a slice of adidas history with these Taekwondo Shoes. The sleek leather upper and ultra-low profile outsole provide a minimalist look inspired by an early 2000s icon.",
+    imgSrc: [
+      "../assets/images/ADIDAS-WOMEN-4.avif", // Front view
+      "../assets/images/ADIDAS-WOMEN-4.2.avif", // Side view
+      "../assets/images/ADIDAS-WOMEN-4.3.avif", // Back view
+      "../assets/images/ADIDAS-WOMEN-4.4.avif", // Top view
+    ],
   },
   {
     id: 9,
-    itemName: "Adidas Gazelle",
-    sizes: ["medium", "large"],
-    price: 100,
-    quantity: 90,
+    itemName: "Subzone Shoes",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: 3400,
+    quantity: 100,
     brand: "Adidas",
-    ratingCount: 160,
-  },
-
-  // Puma
-  {
-    id: 10,
-    itemName: "Puma RS-X3",
-    sizes: ["small", "medium"],
-    price: 90,
-    quantity: 150,
-    brand: "Puma",
-    ratingCount: 150,
-  },
-  {
-    id: 11,
-    itemName: "Puma Future Rider",
-    sizes: ["small", "medium", "large"],
-    price: 100,
-    quantity: 120,
-    brand: "Puma",
-    ratingCount: 190,
-  },
-  {
-    id: 12,
-    itemName: "Puma Suede Classic",
-    sizes: ["small", "medium"],
-    price: 70,
-    quantity: 160,
-    brand: "Puma",
-    ratingCount: 300,
-  },
-  {
-    id: 13,
-    itemName: "Puma Clyde Court",
-    sizes: ["medium", "large"],
-    price: 120,
-    quantity: 130,
-    brand: "Puma",
-    ratingCount: 110,
-  },
-  {
-    id: 14,
-    itemName: "Puma Cali Sport",
-    sizes: ["small", "medium"],
-    price: 85,
-    quantity: 140,
-    brand: "Puma",
-    ratingCount: 210,
-  },
-
-  // Vans
-  {
-    id: 15,
-    itemName: "Vans Old Skool",
-    sizes: ["small", "medium", "large"],
-    price: 65,
-    quantity: 180,
-    brand: "Vans",
-    ratingCount: 300,
-  },
-  {
-    id: 16,
-    itemName: "Vans Authentic",
-    sizes: ["small", "medium"],
-    price: 55,
-    quantity: 250,
-    brand: "Vans",
-    ratingCount: 400,
-  },
-  {
-    id: 17,
-    itemName: "Vans Sk8-Hi",
-    sizes: ["small", "medium", "large"],
-    price: 75,
-    quantity: 100,
-    brand: "Vans",
-    ratingCount: 270,
-  },
-  {
-    id: 18,
-    itemName: "Vans Era",
-    sizes: ["medium", "large"],
-    price: 60,
-    quantity: 140,
-    brand: "Vans",
     ratingCount: 250,
-  },
-  {
-    id: 19,
-    itemName: "Vans Slip-On",
-    sizes: ["small", "medium"],
-    price: 50,
-    quantity: 210,
-    brand: "Vans",
-    ratingCount: 320,
-  },
-
-  // Skechers
-  {
-    id: 20,
-    itemName: "Skechers Go Walk",
-    sizes: ["small", "medium", "large"],
-    price: 55,
-    quantity: 250,
-    brand: "Skechers",
-    ratingCount: 350,
-  },
-  {
-    id: 21,
-    itemName: "Skechers D'lites",
-    sizes: ["small", "medium"],
-    price: 65,
-    quantity: 180,
-    brand: "Skechers",
-    ratingCount: 280,
-  },
-  {
-    id: 22,
-    itemName: "Skechers Energy Lights",
-    sizes: ["medium", "large"],
-    price: 80,
-    quantity: 150,
-    brand: "Skechers",
-    ratingCount: 230,
-  },
-  {
-    id: 23,
-    itemName: "Skechers Arch Fit",
-    sizes: ["small", "medium", "large"],
-    price: 90,
-    quantity: 120,
-    brand: "Skechers",
-    ratingCount: 200,
-  },
-  {
-    id: 24,
-    itemName: "Skechers On-the-Go",
-    sizes: ["small", "medium"],
-    price: 70,
-    quantity: 160,
-    brand: "Skechers",
-    ratingCount: 270,
+    description:
+      "Sleek and comfortable sneakers that support your dynamic movements. Inspired by performance basketball shoes, these adidas sneakers are designed to support your every move. The upper is made from a mix of materials that hug the foot in place while allowing air to circulate. ",
+    imgSrc: [
+      "../assets/images/ADIDAS-WOMEN-5.avif", // Front view
+      "../assets/images/ADIDAS-WOMEN-5.1.avif", // Side view
+      "../assets/images/ADIDAS-WOMEN-5.3.avif", // Back view
+      "../assets/images/ADIDAS-WOMEN-5.4.avif", // Top view
+    ],
   },
 
-  // Fila
+  //
   {
-    id: 25,
-    itemName: "Fila Disruptor 2",
-    sizes: ["medium", "large"],
-    price: 75,
-    quantity: 95,
-    brand: "Fila",
-    ratingCount: 160,
-  },
-  {
-    id: 26,
-    itemName: "Fila Ray Tracer",
-    sizes: ["small", "medium"],
-    price: 85,
+    id: 5,
+    itemName: "Samba OG Shoes",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: 6800,
     quantity: 100,
-    brand: "Fila",
-    ratingCount: 190,
+    brand: "Adidas",
+    ratingCount: 250,
+    description:
+      "The adidas Samba OG Shoes are a casual icon reimagined for sunny, fair weather days. The breathable cotton mesh upper keeps you cool while suede overlays add structure and durability over the toe and along the laces.",
+    imgSrc: [
+      "../assets/images/ADIDAS-MEN-5.avif", // Front view
+      "../assets/images/ADIDAS-MEN-5.2.avif", // Side view
+      "../assets/images/ADIDAS-MEN-5.3.avif", // Back view
+      "../assets/images/ADIDAS-MEN-5.4.avif", // Top view
+    ],
   },
   {
-    id: 27,
-    itemName: "Fila Original Fitness",
-    sizes: ["medium", "large"],
-    price: 80,
-    quantity: 120,
-    brand: "Fila",
-    ratingCount: 230,
-  },
-  {
-    id: 28,
-    itemName: "Fila Venom",
-    sizes: ["small", "medium"],
-    price: 95,
-    quantity: 110,
-    brand: "Fila",
-    ratingCount: 180,
-  },
-  {
-    id: 29,
-    itemName: "Fila Disruptor 3",
-    sizes: ["medium", "large"],
-    price: 85,
-    quantity: 90,
-    brand: "Fila",
-    ratingCount: 200,
+    id: 5,
+    itemName: "Samba OG Shoes",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: 6800,
+    quantity: 100,
+    brand: "Adidas",
+    ratingCount: 250,
+    description:
+      "The adidas Samba OG Shoes are a casual icon reimagined for sunny, fair weather days. The breathable cotton mesh upper keeps you cool while suede overlays add structure and durability over the toe and along the laces.",
+    imgSrc: [
+      "../assets/images/ADIDAS-MEN-5.avif", // Front view
+      "../assets/images/ADIDAS-MEN-5..avif", // Side view
+      "../assets/images/ADIDAS-MEN-5.3.avif", // Back view
+      "../assets/images/ADIDAS-MEN-5.4.avif", // Top view
+    ],
   },
 ];
