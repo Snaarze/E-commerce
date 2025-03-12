@@ -21,6 +21,9 @@ function displayProduct() {
 }
 
 function addCart() {
+  if (!loggedUser) {
+    return alert("Please Login first");
+  }
   const id = loggedUser.cart.length;
   const params = new URLSearchParams(window.location.search);
   const itemData = JSON.parse(decodeURIComponent(params.get("data")));
@@ -28,11 +31,11 @@ function addCart() {
     (users) => users.username === loggedUser.username
   );
 
+  user[findUserIndex] = loggedUser;
+
   const findDuplicate = user[findUserIndex].cart.find(
     (product) => product.itemName === itemData.itemName
   );
-  console.log(findDuplicate);
-  user[findUserIndex] = loggedUser;
 
   if (!findDuplicate) {
     user[findUserIndex].cart.push({

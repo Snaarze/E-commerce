@@ -1,11 +1,16 @@
 import { products } from "./data.js";
 import { user } from "./data.js";
-const cartBtn = document.querySelector(".cart-button");
+import { loggedUser } from "./login.js";
+const cartCount = document.querySelector(".cart-count");
 const productContainer = document.querySelector(".product-container");
 const categoriesContainer = document.querySelector(".categories ul");
 const productCount = document.querySelector(".product-count");
 
-cartBtn.textContent = `Cart (${user[0].cart.length ? 0 : user[0].cart.length})`;
+if (loggedUser) {
+  cartCount.textContent = `Cart (${loggedUser.cart.length})`;
+} else {
+  cartCount.textContent = "Cart (0)";
+}
 
 function renderAllProduct() {
   // remove all the section child if any existing

@@ -1,8 +1,8 @@
 import { user } from "./data.js";
 
 const loginBtn = document.querySelectorAll(".login-btn");
+const logoutBtn = document.querySelectorAll(".logout-btn");
 
-let isLogged = false;
 loginBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     const username = prompt("Please Enter your Username : ", "");
@@ -14,9 +14,18 @@ loginBtn.forEach((btn) => {
     if (isAuth) {
       localStorage.setItem("user", JSON.stringify(isAuth));
       alert(isAuth.username + " is Logged in");
+      location.reload();
     } else {
       alert("Wrong Credentials");
     }
+  });
+});
+
+logoutBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    localStorage.removeItem("user");
+    console.log(JSON.parse(localStorage.getItem("user")));
+    location.reload();
   });
 });
 

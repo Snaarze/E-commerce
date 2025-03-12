@@ -6,6 +6,12 @@ export const user = [
     cart: [],
   },
   {
+    username: "jeremy",
+    password: "jeremy123",
+    usertype: "user",
+    cart: [],
+  },
+  {
     username: "admin123",
     password: "adminpassword",
     userType: "admin",
