@@ -100,6 +100,7 @@ function addCart() {
       itemName: itemData.itemName,
       price: itemData.price,
       quantity: Number(productQuantity.value),
+      src: itemData.imgSrc[0],
     });
   } else {
     const findIndex = user[findUserIndex].cart.findIndex(

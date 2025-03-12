@@ -109,6 +109,7 @@ header ul li img {
 
 form {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 
@@ -117,14 +118,11 @@ form a {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-}
-
-form a button {
-  border-radius: 5px;
-  border-style: none;
   background-color: #9c89ff;
-  padding: 10px;
   color: white;
+  height: 30px;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 form div {
@@ -161,19 +159,40 @@ main section {
 main section ul {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+
+main section ul li div p {
+  max-width: 24ch;
 }
 
 main section ul li {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: white;
   border-radius: 20px;
 }
 
+.remove-btn {
+  border: none;
+  background-color: white;
+}
+
+.remove-btn i {
+  font-size: 24px;
+  margin-right: 20px;
+}
+
 main section ul li img {
   height: auto;
   width: 100px;
+}
+
+main section ul li img,
+main section ul li {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 main section ul li div {
@@ -192,7 +211,7 @@ main section ul li div .price {
   color: #9c89ff;
   padding: 5px;
   border-radius: 20px;
-  width: 25px;
+  max-width: 50px;
   font-weight: bold;
 }
 
