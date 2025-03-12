@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/productView.css">
     <link rel="stylesheet" href="../css/loginmodal.css">
 </head>
 
@@ -38,50 +39,77 @@
                 <input type="text" placeholder="Search Products">
                 <img src="../assets/images/search icon.png" alt="magnify-icon">
                 <a href="../html/cart.html" class="cart-button"><img src="../assets/images/cart icon.png"
-                        alt="cart-icon">
-                    <span class="cart-count"></span></a>
+                        alt="cart-icon"> <span class="cart-count"></span></a>
             </li>
         </ul>
     </form>
     <main>
-        <aside class="categories">
-            <ul>
-                <p>Categories</p>
-                <li data-text="All Products">
-                    <a href="#" data-text="All Products"><img data-text="All Products"
-                            src="../assets/images/all-product-icon.png" alt="All-product-icon"></a>
-                    <p data-text="All Products">All Products</p>
-                </li>
-            </ul>
-        </aside>
-        <div class="all-products">
-            <ul>
-                <p class="product-count"></p>
-                <section class="product-container">
-                    <li>
-                        <a href="#" class="product-anchor">
-                            <img src="../assets/images/shoe1.png" alt="Shoe-image" class="product-img">
-
-                            <div class="info-container">
-                                <div class="left-container">
-                                    <p class="shoe-name">Nike Rev 7</p>
-                                    <div class="ratings-container">
-                                        <img src="../assets/images/star.png" class="star" alt="">
-                                        <img src="../assets/images/star.png" class="star" alt="">
-                                        <img src="../assets/images/star.png" class="star" alt="">
-                                        <img src="../assets/images/star.png" class="star" alt="">
-                                        <img src="../assets/images/star.png" class="star" alt="">
-                                        <span class="ratings">36 Ratings</span>
-                                    </div>
-                                </div>
-                                <p class="price">$100</p>
-                            </div>
-                        </a>
+        <a href="../html/index.html" class="product-link-count"></a>
+        <section class="product-container">
+            <div class="product-left-container">
+                <img src="../assets/images/adidas.png" alt="" class="main-product">
+                <div class="other-img-container">
+                    <img class="front-view" src="../assets/images/all-product-icon.png" alt="">
+                    <img class="side-view" src="../assets/images/Nike-Logo.png" alt="">
+                    <img class="back-view" src="../assets/images/adidas.png" alt="">
+                    <img class="top-view" src="../assets/images/adidas.png" alt="">
+                </div>
+            </div>
+            <div class="product-right-container">
+                <h3 class="product-name"> Vegetables</h3>
+                <div class="star-container">
+                    <img src="../assets/images/star.png" alt="" class="star">
+                    <img src="../assets/images/star.png" alt="" class="star">
+                    <img src="../assets/images/star.png" alt="" class="star">
+                    <img src="../assets/images/star.png" alt="" class="star">
+                    <img src="../assets/images/star.png" alt="" class="star">
+                    <p class="item-rating">36 ratings</p>
+                </div>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla consequatur ipsum voluptatem earum!
+                    Quaerat fugit atque, voluptatibus tempora similique nobis laboriosam aspernatur voluptas quod hic
+                    quisquam praesentium iusto quasi temporibus.
+                </p>
+                <ul>
+                    <li class="product-action-container">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" name="quantity" id="quantity" value="1" min="0">
                     </li>
-                </section>
+                    <li class="product-action-container">
+                        <span>Total Amount : </span>
+                        <p class="product-price"></p>
+                    </li>
+                    <li class="product-action-container">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+        <section class="similar-items-container">
+            <h4>Similar Items</h4>
+            <ul class="similar-container">
+                <!-- <li>
+                    <img src="../assets/images/adidas.png" alt="">
+                    <div class="item-info-container">
+                        <div class="info-left-container">
+                            <p class="similar-product-name"> Adidas V1 Jordan</p>
+                            <div class="star-container">
+                                <img src="../assets/images/star.png" alt="" class="star">
+                                <img src="../assets/images/star.png" alt="" class="star">
+                                <img src="../assets/images/star.png" alt="" class="star">
+                                <img src="../assets/images/star.png" alt="" class="star">
+                                <img src="../assets/images/star.png" alt="" class="star">
+                                <p class="similar-item-rating">250 ratings</p>
+                            </div>
+                        </div>
+                        <p class="similar-item-price"> $10</p>
+                    </div>
+                </li> -->
             </ul>
-        </div>
+        </section>
     </main>
+
     <!-- dialog form for login -->
     <dialog class="login-form">
         <div class="container">
@@ -150,9 +178,7 @@
             </section>
         </div>
     </dialog>
-
-    <script type="module" src="../js/script.js"></script>
-    <script type="module" src="../js//login.js"></script>
+    <script type="module" src="../js/productView.js"></script>
 </body>
 
 </html>

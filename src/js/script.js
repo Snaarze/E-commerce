@@ -1,13 +1,22 @@
 import { products } from "./data.js";
-
+import { loggedUser } from "./login.js";
+const cartCount = document.querySelector(".cart-count");
 const productContainer = document.querySelector(".product-container");
 const categoriesContainer = document.querySelector(".categories ul");
+const productCount = document.querySelector(".product-count");
+
+if (loggedUser) {
+  cartCount.textContent = `Cart (${loggedUser.cart.length})`;
+} else {
+  cartCount.textContent = "Cart (0)";
+}
 
 function renderAllProduct() {
   // remove all the section child if any existing
   while (productContainer.firstChild) {
     productContainer.removeChild(productContainer.firstChild);
   }
+  productCount.textContent = `All Products (${products.length})`;
   //   re-render each item of the products
   createProduct(products);
 }
@@ -18,7 +27,7 @@ function createProduct(array) {
     const liContainer = document.createElement("li");
     const productTag = document.createElement("a");
     const img = document.createElement("img");
-    img.src = "../assets/images/shoe1.png";
+    img.src = item.imgSrc[0];
     img.classList.add("product-img");
 
     const infoContainer = document.createElement("div");
@@ -46,7 +55,7 @@ function createProduct(array) {
 
     const ratings = document.createElement("p");
     ratings.classList.add("ratings");
-    ratings.textContent = "36 Ratings";
+    ratings.textContent = `${item.ratingCount} ratings`;
 
     ratingContainer.appendChild(ratings);
 
@@ -62,6 +71,11 @@ function createProduct(array) {
     liContainer.appendChild(productTag);
     infoContainer.appendChild(shoePrice);
     productContainer.appendChild(liContainer);
+
+    // add event for productTag
+    liContainer.addEventListener("click", (e) => {
+      viewProduct(e, item);
+    });
   });
 }
 
@@ -92,7 +106,10 @@ function renderSelectedCategory(e) {
     return;
   }
 
-  let liElement = e.target.closest("li").querySelector("p").textContent.trim();
+  const liElement = e.target
+    .closest("li")
+    .querySelector("p")
+    .textContent.trim();
 
   if (liElement === "All Products") {
     renderAllProduct();
@@ -100,6 +117,7 @@ function renderSelectedCategory(e) {
   }
 
   const filteredProduct = products.filter((item) => item.brand === liElement);
+  productCount.textContent = `${filteredProduct[0].brand} (${filteredProduct.length})`;
 
   //   // remove all the section child if any existing
   while (productContainer.firstChild) {
@@ -109,8 +127,16 @@ function renderSelectedCategory(e) {
   createProduct(filteredProduct);
 }
 
+function viewProduct(e, item) {
+  e.preventDefault();
+  window.location.href = `../html/productView.html?data=${encodeURIComponent(
+    JSON.stringify(item)
+  )}`;
+}
+
 categoriesContainer.addEventListener("click", renderSelectedCategory);
 
 // initial run
 renderCategories();
 renderAllProduct();
+console.log(JSON.parse(localStorage.getItem("user")));
