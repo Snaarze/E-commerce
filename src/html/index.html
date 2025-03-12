@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <aside class="nav-left">
+        <ul>
+            <li><img src="../assets/images/Nike-Logo.png" alt="logo"></li>
+            <li><a href="#"><img src="../assets/images/menu.png" alt="PRODUCT_VIEW"></a></li>
+        </ul>
+    </aside>
+    <header>
+        <ul>
+            <li><img src="../assets/images/Nike-Logo.png" alt="shoe logo">
+                <p>Let's order fresh items for you</p>
+            </li>
+            <li>
+                <button class="signup-btn">Signup</button>
+                <button class="login-btn">Login</button>
+            </li>
+        </ul>
+    </header>
+    <form>
+        <ul>
+            <li>
+                <input type="text" placeholder="Search Products">
+                <img src="../assets/images/search icon.png" alt="magnify-icon">
+                <a href="#"><button class="cart-button"><img src="../assets/images/cart icon.png"
+                            alt="cart-icon"></button></a>
+            </li>
+        </ul>
+    </form>
+    <main>
+        <aside class="categories">
+            <ul>
+                <p>Categories</p>
+                <li data-text="All Products">
+                    <a href="#" data-text="All Products"><img data-text="All Products"
+                            src="../assets/images/all-product-icon.png" alt="All-product-icon"></a>
+                    <p data-text="All Products">All Products</p>
+                </li>
+            </ul>
+        </aside>
+        <div class="all-products">
+            <ul>
+                <p class="product-count"></p>
+                <section class="product-container">
+                    <li>
+                        <a href="#" class="product-anchor">
+                            <img src="../assets/images/shoe1.png" alt="Shoe-image" class="product-img">
+
+                            <div class="info-container">
+                                <div class="left-container">
+                                    <p class="shoe-name">Nike Rev 7</p>
+                                    <div class="ratings-container">
+                                        <img src="../assets/images/star.png" class="star" alt="">
+                                        <img src="../assets/images/star.png" class="star" alt="">
+                                        <img src="../assets/images/star.png" class="star" alt="">
+                                        <img src="../assets/images/star.png" class="star" alt="">
+                                        <img src="../assets/images/star.png" class="star" alt="">
+                                        <span class="ratings">36 Ratings</span>
+                                    </div>
+                                </div>
+                                <p class="price">$100</p>
+                            </div>
+                        </a>
+                    </li>
+                </section>
+            </ul>
+        </div>
+    </main>
+    <script type="module" src="../js/script.js"></script>
+    <script type="module" src="../js//login.js"></script>
+</body>
+
+</html>
