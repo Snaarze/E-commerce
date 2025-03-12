@@ -1,6 +1,29 @@
 import { loggedUser } from "./login.js";
+import { user } from "./data.js";
 const cartListContainer = document.querySelector(".cart-list-container");
-function displayUserCart() {}
+const totalItemsAmount = document.querySelector(".total-items-amount");
+const totalAmount = document.querySelector(".total-amount");
+const shippingFee = document.querySelector(".shipping-fee-price");
+const cartCount = document.querySelector(".cart-count");
+const findUserIndex = user.findIndex(
+  (users) => loggedUser && users.username === loggedUser.username
+);
+
+function displayUserCart() {
+  user[findUserIndex] = loggedUser;
+  updateCartCount();
+  if (loggedUser) {
+    createCartList();
+  }
+  updateOrderSummary();
+  console.log(user[findUserIndex]);
+}
+
+function updateCartCount() {
+  cartCount.textContent = loggedUser
+    ? `Cart (${loggedUser.cart.length})`
+    : "Cart (0)";
+}
 
 function createCartList() {
   loggedUser.cart.forEach((item, index) => {
@@ -52,7 +75,59 @@ function createCartList() {
     removeButton.appendChild(buttonIcon);
     liContainer.appendChild(removeButton);
     cartListContainer.appendChild(liContainer);
+
+    removeButton.addEventListener("click", removeItem);
+    quantityInput.addEventListener("input", updateQuantity);
   });
 }
 
-createCartList();
+function updateQuantity(e) {
+  console.log(e.target.value);
+}
+
+function removeItem(e) {
+  const grandParentElement = e.target.parentElement.parentElement.parentElement;
+  const selectedParentElement = e.target.parentElement.parentElement;
+  let index = Array.from(grandParentElement.children).indexOf(
+    selectedParentElement
+  );
+
+  user[findUserIndex].cart = loggedUser.cart;
+
+  user[findUserIndex].cart.splice(index, 1);
+  console.log(user[findUserIndex]);
+
+  localStorage.setItem("user", JSON.stringify(user[findUserIndex]));
+
+  grandParentElement.removeChild(selectedParentElement);
+  updateOrderSummary();
+  updateCartCount();
+}
+
+function updateOrderSummary() {
+  const totalAmountOrder = loggedUser
+    ? loggedUser.cart.reduce((acc, ojb) => acc + ojb.price * ojb.quantity, 0)
+    : 0;
+  let shippingFeePrice = 0;
+  // checks if the current cart checkout is higher than 1000
+  if (
+    totalAmountOrder < 1000 &&
+    loggedUser &&
+    user[findUserIndex].cart.length
+  ) {
+    shippingFeePrice = 20;
+  }
+
+  if (loggedUser) {
+    totalItemsAmount.textContent = `$${totalAmountOrder}`;
+    shippingFee.textContent = `$${shippingFeePrice}`;
+    totalAmount.textContent = `$${totalAmountOrder + shippingFeePrice}`;
+    return;
+  }
+
+  totalAmount.textContent = "$0";
+  totalItemsAmount.textContent = "$0";
+  shippingFee.textContent = "$0";
+}
+
+displayUserCart();

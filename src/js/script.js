@@ -1,5 +1,4 @@
 import { products } from "./data.js";
-import { user } from "./data.js";
 import { loggedUser } from "./login.js";
 const cartCount = document.querySelector(".cart-count");
 const productContainer = document.querySelector(".product-container");
@@ -56,7 +55,7 @@ function createProduct(array) {
 
     const ratings = document.createElement("p");
     ratings.classList.add("ratings");
-    ratings.textContent = "36 Ratings";
+    ratings.textContent = `${item.ratingCount} ratings`;
 
     ratingContainer.appendChild(ratings);
 

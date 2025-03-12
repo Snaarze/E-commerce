@@ -15,7 +15,7 @@
     <aside>
         <ul>
             <li><img src="../assets/images/Nike-Logo.png" alt="logo"></li>
-            <li><a href=""><i class="fa-solid fa-bars"></i></a></li>
+            <li><a href="index.html"><i class="fa-solid fa-bars"></i></a></li>
         </ul>
     </aside>
     <div class="container">
@@ -24,8 +24,14 @@
                 <li><img src="../assets/images/Nike-Logo.png" alt="shoe logo">
                     <p>Let's order fresh items for you</p>
                 </li>
-                <li>
-                    <a href="#"><button><img src="" alt="Profile Icon"></button></a>
+                <li class="btn-interaction">
+                    <button class="signup-btn">Signup</button>
+                    <button class="login-btn">Login</button>
+                </li>
+                <li class="hide-btn logged-container">
+                    <img src="" alt="test">
+                    <span class="email-logged"></span>
+                    <button class="logout-btn">Log out</button>
                 </li>
             </ul>
         </header>
@@ -34,8 +40,7 @@
                 <input type="text" placeholder="Search Products">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <a href="../html/cart.html"><i class="fa-solid fa-cart-shopping"></i> <span class="cart-count">Cart
-                    (0)</span></a>
+            <a href="../html/cart.html"><i class="fa-solid fa-cart-shopping"></i> <span class="cart-count"></span></a>
         </form>
         <main>
             <section>
@@ -63,15 +68,15 @@
                         <h4>Order Summary</h4>
                         <li>
                             <p>Items</p>
-                            <p>$40</p>
+                            <p class="total-items-amount">$40</p>
                         </li>
                         <li class="shipping-fee">
                             <p>Shipping Fee</p>
-                            <p>$5</p>
+                            <p class="shipping-fee-price">$5</p>
                         </li>
                         <li>
                             <p>Total Amount</p>
-                            <p>$45</p>
+                            <p class="total-amount">$45</p>
                         </li>
                     </div>
                     <div class="checkout">
@@ -80,6 +85,40 @@
                 </ul>
             </div>
         </main>
+        <!-- dialog form for login -->
+        <dialog class="login-form">
+            <div class="modal-body p-3">
+                <button type="button" class="btn-close close-form-btn"></button>
+                <div class="row">
+                    <div class="col-12 p-5">
+                        <div class="modalLogin row">
+                            <img src="../assets/images/Nike-Logo.png" alt="Logo" class="nike-logo">
+                            <div class="col-12 d-flex justify-content-between my-4">
+                                <h6>
+                                    <i class="fa-regular fa-face-smile"></i> Login to order
+                                </h6>
+                                <a href="" class="new-member-register">New Member? Register here.</a>
+                            </div>
+                            <div class="col-12 mt-2 mb-5">
+                                <div class="mb-3">
+                                    <label for="email_login" class="form-label">Email
+                                    </label>
+                                    <input type="email" class="form-control" id="email_login" placeholder="Email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password_login" class="form-label">Password
+                                    </label>
+                                    <input type="email" class="form-control" id="password_login" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button class="w-100 submit-btn">Sign In</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </dialog>
     </div>
     <script type="module" src="../js/cart.js"></script>
 </body>
