@@ -12,8 +12,6 @@
 }
 
 dialog {
-  height: 800px;
-  width: 700px;
   position: fixed;
   top: 5%;
   left: 35%;
@@ -45,7 +43,9 @@ img {
   display: block;
 }
 
-button {
+button.signup-btn,
+.login-btn,
+button.add-to-cart-btn {
   padding: 10px 15px;
   border: none;
   background-color: darkblue;
@@ -54,7 +54,7 @@ button {
   border-radius: 5px;
 }
 
-input[type="text"] {
+form.form-title input[type="text"] {
   margin: 30px 0px 30px 30px;
   padding: 10px;
   border: 1px solid #ddd;
@@ -91,7 +91,7 @@ input[type="text"] {
   height: auto;
 }
 
-header {
+.header-title {
   background-color: #ffffff;
   color: black;
   padding: 10px;
@@ -117,7 +117,7 @@ header li img {
   margin-right: 10px;
 }
 
-form {
+form.form-title {
   padding: 10px 20px;
   margin-left: 51px;
   display: flex;
@@ -126,17 +126,17 @@ form {
   background-color: #f3f8fd;
 }
 
-form ul {
+form.form-title ul {
   display: flex;
   align-items: center;
 }
 
-form li {
+form.form-title li {
   display: flex;
   align-items: center;
 }
 
-form img {
+form.form-title img {
   width: 20px;
   height: 20px;
   margin: 0 10px;

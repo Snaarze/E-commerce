@@ -10,17 +10,37 @@ const passwordInput = document.querySelector("#password_login");
 const emailLogged = document.querySelector(".email-logged");
 const btnInteraction = document.querySelector(".btn-interaction");
 const btnLogged = document.querySelector(".logged-container");
-
+const signupModalBtn = document.querySelector(".signup-modal-btn");
+const signupForm = document.querySelector(".signup-form");
+const memberBtn = document.querySelector(".member-btn");
+const closeSignupBtn = document.querySelectorAll(".close-signup-btn");
 loginBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     openForm.showModal();
   });
 });
 
+memberBtn.addEventListener("click", () => {
+  openForm.showModal();
+  signupForm.close();
+});
+
+signupModalBtn.addEventListener("click", () => {
+  openForm.close();
+  signupForm.showModal();
+});
+
 closeForm.forEach((btn) => {
   btn.addEventListener("click", () => {
-    console.log("test");
     openForm.close();
+    emailInput.value = "";
+    passwordInput.value = "";
+  });
+});
+
+closeSignupBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    signupForm.close();
   });
 });
 
@@ -32,7 +52,8 @@ logoutBtn.forEach((btn) => {
   });
 });
 
-submitBtn.addEventListener("click", () => {
+submitBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   const isAuth = user.find(
     (users) =>
       users.email === emailInput.value && users.password === passwordInput.value
@@ -44,9 +65,8 @@ submitBtn.addEventListener("click", () => {
 
   if (isAuth) {
     openForm.close();
-    localStorage.setItem("user", JSON.stringify(isAuth));
-    checkLoginUser();
     location.reload();
+    localStorage.setItem("user", JSON.stringify(isAuth));
   }
 });
 
@@ -61,8 +81,7 @@ function checkLoginUser() {
     btnInteraction.classList.remove("hide-btn");
   }
 }
-// submitBtn.foreach((btn) => {
+
 checkLoginUser();
-// });
 
 export const loggedUser = JSON.parse(localStorage.getItem("user"));

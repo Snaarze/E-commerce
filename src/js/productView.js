@@ -1,6 +1,7 @@
 import { products } from "./data.js";
 import { user } from "./data.js";
 import { loggedUser } from "./login.js";
+const openForm = document.querySelector(".login-form");
 const productCount = document.querySelector(".product-link-count");
 const productName = document.querySelector(".product-name");
 const productPrice = document.querySelector(".product-price");
@@ -57,7 +58,7 @@ function displayProduct() {
 
 function addCart() {
   if (!loggedUser) {
-    return alert("Please Login first");
+    return openForm.showModal();
   }
 
   const id = loggedUser.cart.length;
@@ -119,15 +120,18 @@ function createSimilarItems(array) {
   const filteredSimilarProduct = products.filter(
     (product) => product.brand === array.brand
   );
-  filteredSimilarProduct.forEach((item) => {
+  filteredSimilarProduct.forEach((item, index) => {
     if (array.itemName === item.itemName) {
+      return;
+    }
+    if (index > 5) {
       return;
     }
     // create element
     const liContainer = document.createElement("li");
     const productTag = document.createElement("a");
     const img = document.createElement("img");
-    img.src = "../assets/images/shoe1.png";
+    img.src = item.imgSrc[0];
     img.classList.add("product-img");
 
     const infoContainer = document.createElement("div");
