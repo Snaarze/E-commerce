@@ -75,8 +75,8 @@ function createCartList() {
     const quantityContainer = document.createElement("div");
     const quantityText = document.createElement("p");
     quantityText.classList.add("quantity");
-    const quantityInput = document.createElement("input");
-    quantityInput.value = item.quantity;
+    const quantityInput = document.createElement("p");
+    quantityInput.textContent = item.quantity;
     quantityText.textContent = "Quantity";
 
     quantityContainer.appendChild(quantityText);
@@ -105,12 +105,7 @@ function createCartList() {
     cartListContainer.appendChild(liContainer);
 
     removeButton.addEventListener("click", removeItem);
-    quantityInput.addEventListener("input", updateQuantity);
   });
-}
-
-function updateQuantity(e) {
-  console.log(e.target.value);
 }
 
 function removeItem(e) {

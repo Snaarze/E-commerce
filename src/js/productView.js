@@ -12,7 +12,7 @@ const productQuantity = document.querySelector(".quantity");
 const mainImg = document.querySelector(".main-product");
 const totalPrice = document.querySelector(".total-amount");
 const productOtherImg = document.querySelectorAll("#shoe-details img");
-const similarContainer = document.querySelector(".similar-container");
+const Header = document.querySelector("header");
 const cartActionModal = document.querySelector(".cart-action-modal");
 const descriptionItem = document.querySelector(".description");
 // view of image selectors
@@ -20,6 +20,9 @@ const frontView = document.querySelector(".front-view");
 const sideView = document.querySelector(".side-view");
 const backView = document.querySelector(".back-view");
 const topView = document.querySelector(".top-view");
+
+const increaseQuantity = document.querySelector(".increase-quantity");
+const decreaseQuantity = document.querySelector(".decrease-quantity");
 // initial  render
 
 // data that passed from the url
@@ -36,7 +39,7 @@ function displayProduct() {
   productPrice.textContent = `${itemData.price}`;
   mainImg.src = itemData.imgSrc[0];
   productRating.textContent = ` ${itemData.ratingCount} Ratings`;
-  totalPrice.textContent = `${itemData.price}`;
+  totalPrice.textContent = 0;
   const findDuplicate = loggedUser?.cart.find(
     (product) => product.itemName === itemData.itemName
   );
@@ -60,9 +63,20 @@ function displayProduct() {
   backView.src = itemData.imgSrc[3];
 
   productQuantity.addEventListener("input", (e) => {
+    productQuantity.value = productQuantity.value.replace(/-/g, "");
+
+    productQuantity.value = productQuantity.value
+      .replace(/^0(?!$)/, "")
+      .replace(/(\d+-|--)(?!\d)/g, "0");
+
+    if (e.target.value < 0) {
+      e.target.value = 0;
+    }
+
     if (Number(e.target.value) > Number(e.target.getAttribute("max"))) {
       productQuantity.value = Number(e.target.getAttribute("max"));
     }
+    totalPrice.textContent = +productPrice.textContent * +productQuantity.value;
   });
 
   const maxValue = Number(productQuantity.getAttribute("max"));
@@ -71,6 +85,8 @@ function displayProduct() {
     addCartBtn.disabled = true;
     productQuantity.value = 0;
     productQuantity.disabled = true;
+    increaseQuantity.disabled = true;
+    decreaseQuantity.disabled = true;
   }
 
   createSimilarItems(itemData);
@@ -87,8 +103,8 @@ function addCart() {
 
   const id = loggedUser.cart.length;
 
-  if (Number(productQuantity.value) < 0) {
-    return alert("Please type a valid number");
+  if (Number(productQuantity.value) < 1) {
+    return;
   }
 
   const findUserIndex = user.findIndex(
@@ -129,7 +145,10 @@ function addCart() {
   if (maxValue < 1) {
     addCartBtn.disabled = true;
     productQuantity.value = 0;
+    increaseQuantity.disabled = true;
+    decreaseQuantity.disabled = true;
     productQuantity.disabled = true;
+    totalPrice.textContent = 0;
   }
 
   if (Number(productQuantity.value) > maxValue) {
@@ -182,6 +201,7 @@ function createSimilarItems(array) {
     const shoeImage = document.createElement("img");
     shoeImage.src = filteredSimilarProduct[randomNumber].imgSrc[0];
     shoeImage.alt = "shoe image";
+    shoeImage.classList = "other-image-item";
     liImage.appendChild(shoeImage);
 
     const detailsContainer = document.createElement("div");
@@ -227,67 +247,6 @@ function createSimilarItems(array) {
       viewProduct(e, filteredSimilarProduct[randomNumber]);
     });
   }
-  // filteredSimilarProduct.forEach((item, index) => {
-  //   if (array.itemName === item.itemName) {
-  //     return;
-  //   }
-  //   if (index > 5) {
-  //     return;
-  //   }
-  //   // create element
-  //   const liContainer = document.createElement("li");
-  //   const productTag = document.createElement("a");
-  //   const img = document.createElement("img");
-  //   img.src = item.imgSrc[0];
-  //   img.classList.add("product-img");
-
-  //   const infoContainer = document.createElement("div");
-  //   infoContainer.classList.add("item-info-container");
-
-  //   const leftContainer = document.createElement("div");
-  //   leftContainer.classList.add("info-left-container");
-
-  //   const shoeNameText = document.createElement("p");
-  //   shoeNameText.textContent = item.itemName;
-  //   shoeNameText.classList.add("similar-product-name");
-
-  //   const ratingContainer = document.createElement("div");
-  //   ratingContainer.classList.add("star-container");
-
-  //   leftContainer.append(shoeNameText);
-  //   infoContainer.appendChild(leftContainer);
-  //   for (let i = 0; i < 5; i++) {
-  //     const starImg = document.createElement("img");
-  //     starImg.classList.add("star");
-  //     starImg.src = "../assets/images/star.png";
-
-  //     ratingContainer.appendChild(starImg);
-  //   }
-
-  //   const ratings = document.createElement("p");
-  //   ratings.classList.add("similar-item-rating");
-  //   ratings.textContent = `${item.ratingCount} ratings`;
-
-  //   ratingContainer.appendChild(ratings);
-
-  //   const shoePrice = document.createElement("p");
-  //   shoePrice.textContent = `$ ${item.price}`;
-  //   shoePrice.classList.add("similar-item-price");
-
-  //   leftContainer.appendChild(ratingContainer);
-
-  //   // append all the children to their respective parent
-  //   productTag.appendChild(img);
-  //   productTag.appendChild(infoContainer);
-  //   liContainer.appendChild(productTag);
-  //   infoContainer.appendChild(shoePrice);
-  //   similarContainer.appendChild(liContainer);
-
-  //   // add event for productTag
-  //   liContainer.addEventListener("click", (e) => {
-  //     viewProduct(e, item);
-  //   });
-  // });
 }
 
 function viewProduct(e, item) {
@@ -298,6 +257,29 @@ function viewProduct(e, item) {
 }
 
 addCartBtn.addEventListener("click", addCart);
+increaseQuantity.addEventListener("click", () => {
+  if (+productQuantity.value === 0) {
+    productQuantity.value = "1";
+    totalPrice.textContent = +productPrice.textContent;
+    return;
+  }
+
+  if (+productQuantity.value >= Number(productQuantity.getAttribute("max"))) {
+    productQuantity.value = Number(productQuantity.getAttribute("max"));
+    return;
+  }
+  +productQuantity.value++;
+  totalPrice.textContent = +productQuantity.value * +productPrice.textContent;
+});
+
+decreaseQuantity.addEventListener("click", () => {
+  if (+productQuantity.value === 0) {
+    return;
+  }
+
+  +productQuantity.value--;
+  totalPrice.textContent = +productQuantity.value * +productPrice.textContent;
+});
 
 productOtherImg.forEach((btn) => {
   btn.addEventListener("click", (e) => {
