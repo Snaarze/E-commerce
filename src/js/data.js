@@ -499,5 +499,167 @@ export const products = [
         "src/assets/images/CONV-WOMEN-5.4.webp"     // Top view
     ]
   },
-
+  // PUMA
+  {
+    id: 30,
+    itemName: "Deviate NITRO™ 3 PUMA x SAYSKY Running Shoes Men",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: "₱8,800",
+    quantity: 100,
+    brand: "PUMA",
+    ratingCount: 250,
+    description: "Every runner is a star – whether you're lacing up for the first time or running your 100th race. From tanks and tops to shorts and tights, PUMA x SAYSKY has something for every runner. Featuring NITROFOAM™ cushioning and PWRPLATE propulsion, the Deviate 3 delivers a responsive, snappy ride. Engineered mesh and PUMAGRIP outsole ensure breathability and traction. This highly responsive shoe delivers a snappy ride, infusing speed into every stride.",
+    imgSrc: [
+        "src/assets/images/PUMA-MEN-1.avif",  // Front view
+        "src/assets/images/PUMA-MEN-1.2.avif",   // Side view
+        "src/assets/images/PUMA-MEN-1.3.avif",   // Back view
+        "src/assets/images/PUMA-MEN-1.4.avif"     // Top view
+    ]
+  },
+  {
+    id: 31,
+    itemName: "Deviate NITRO™ 2 Men's Running Shoes",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: "₱8,800",
+    quantity: 100,
+    brand: "PUMA",
+    ratingCount: 250,
+    description: "The Deviate NITRO™ 2 – just like v1, only improved. It’s the max cushion, max performance running shoe that makes going faster even easier. The update includes NITROFOAM™ Elite for improved responsiveness, a reworked collar to reduce heel slip, and a lighter, asymmetrical base that works better with your body across all distances – be it short runs, marathons, and even ultras.",
+    imgSrc: [
+        "src/assets/images/PUMA-MEN-2.avif",  // Front view
+        "src/assets/images/PUMA-MEN-2.2.avif",   // Side view
+        "src/assets/images/PUMA-MEN-2.3.avif",   // Back view
+        "src/assets/images/PUMA-MEN-2.4.avif"     // Top view
+    ]
+  },
+  {
+    id: 32,
+    itemName: "Magnify NITRO™ 2 Running Shoes Men",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: "₱7,395",
+    quantity: 100,
+    brand: "PUMA",
+    ratingCount: 250,
+    description: "It’s all about a comfortable ride with the Magnify NITRO™ 2, and this season we’ve retooled the model with an engineered mesh upper and even more NITRO™. Constructed with our thickest piece of nitrogen-infused NITRO™ foam in the midsole, this shoe is built for long runs where comfort is your top priority. We've even tossed in an extra amount of rubber placements for added durability while you log miles.",
+    imgSrc: [
+        "src/assets/images/PUMA-MEN-3.avif",  // Front view
+        "src/assets/images/PUMA-MEN-3.2.avif",   // Side view
+        "src/assets/images/PUMA-MEN-3.3.avif",   // Back view
+        "src/assets/images/PUMA-MEN-3.4.avif"     // Top view
+    ]
+  },
+  {
+    id: 33,
+    itemName: "Redeem Pro Racer Running Shoe",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: "₱5,000",
+    quantity: 100,
+    brand: "PUMA",
+    ratingCount: 250,
+    description: "We built the Redeem Pro Racer for one thing: speed. The outsole is made of full-length rubber for maximum traction and durability. On the upper, we’ve used a lightweight mono mesh for bold colour and ultra breathability.",
+    imgSrc: [
+        "src/assets/images/PUMA-MEN-4.avif",  // Front view
+        "src/assets/images/PUMA-MEN-4.2.avif",   // Side view
+        "src/assets/images/PUMA-MEN-4.3.avif",   // Back view
+        "src/assets/images/PUMA-MEN-4.4.avif"     // Top view
+    ]
+  },
+  {
+    id: 34,
+    itemName: "Reflect Lite Running Shoes",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: "₱2,460",
+    quantity: 100,
+    brand: "PUMA",
+    ratingCount: 250,
+    description: "Lightness equals quickness in this lightweight runner reinforced with PUMALite foam technology. The sleek design boasts a PU SKINCAGE and Formstrip detailing for athletes who set the pace when it comes to performance and style.",
+    imgSrc: [
+        "src/assets/images/PUMA-MEN-5.avif",  // Front view
+        "src/assets/images/PUMA-MEN-5.2.avif",   // Side view
+        "src/assets/images/PUMA-MEN-5.3.avif",   // Back view
+        "src/assets/images/PUMA-MEN-5.4.avif"     // Top view
+    ]
+  },
+  {
+    id: 35,
+    itemName: "FAST-R NITRO™ Elite 2 Running Shoes",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: "₱4,275",
+    quantity: 100,
+    brand: "PUMA",
+    ratingCount: 250,
+    description: "FAST-R NITRO™ ELITE 2 is PUMA's ultimate race-day footwear with enhanced NITROFOAM™ ELITE and PWRPLATE technologies. Enjoy a more propulsive ride and optimised running economy with increased stack heights and an aggressive shape. The ULTRAWEAVE upper ensures a lightweight and secure fit, while PWRTAPE support keeps you firmly in control as you conquer your race-course. From short distances to marathons, this shoe offers unbeatable speed and cushioning for your best performance yet.",
+    imgSrc: [
+        "src/assets/images/PUMA-WOMEN-1.avif",  // Front view
+        "src/assets/images/PUMA-WOMEN-1.2.avif",   // Side view
+        "src/assets/images/PUMA-WOMEN-1.3.avif",   // Back view
+        "src/assets/images/PUMA-WOMEN-1.4.avif"     // Top view
+    ]
+  },
+  {
+    id: 36,
+    itemName: "FAST-R NITRO™ Elite 2 Running Shoes",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: "₱12,720",
+    quantity: 100,
+    brand: "PUMA",
+    ratingCount: 250,
+    description: "The FAST-R NITRO™ ELITE 2 is PUMA's latest race-day shoe, designed for maximum performance. It features upgraded NITRO ELITE and PWRPLATE technologies, offering more cushioning and a propulsive feel. The cushioned heel stabilizes your foot, while the responsive forefoot propels you forward. The shoe has a great fit with lightweight ULTRAWEAVE material and PWRTAPE support, making it perfect for any race. Whether you're headed for a short sprint or a marathon, these kicks have you covered.",
+    imgSrc: [
+        "src/assets/images/PUMA-WOMEN-2.avif",  // Front view
+        "src/assets/images/PUMA-WOMEN-2.2.avif",   // Side view
+        "src/assets/images/PUMA-WOMEN-2.3.avif",   // Back view
+        "src/assets/images/PUMA-WOMEN-2.4.avif"     // Top view
+    ]
+  },
+  {
+    id: 37,
+    itemName: "Voyage NITRO™ 3 Disc Trail Running Shoes",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: "₱9,800",
+    quantity: 100,
+    brand: "PUMA",
+    ratingCount: 250,
+    description: "Voyage NITRO™ 3 DISC is crafted for durability and comfort, offering a smooth and responsive ride with NITROFOAM™ cushioning. The upper features PUMA DISC, an advanced fit system that allows you to achieve optimal lockdown with a quick dial turn. Tackle any terrain confidently, thanks to the 4mm PUMAGRIPATR lugs that provide exceptional grip and traction.",
+    imgSrc: [
+        "src/assets/images/PUMA-WOMEN-3.avif",  // Front view
+        "src/assets/images/PUMA-WOMEN-3.2.avif",   // Side view
+        "src/assets/images/PUMA-WOMEN-3.3.avif",   // Back view
+        "src/assets/images/PUMA-WOMEN-3.4.avif"     // Top view
+    ]
+  },
+  {
+    id: 38,
+    itemName: "ForeverRun NITRO™",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: "₱8,700",
+    quantity: 100,
+    brand: "PUMA",
+    ratingCount: 250,
+    description: "Experience unparalleled support with ForeverRun NITRO™ for women. Featuring NITROFOAM™ cushioning and our RUNGUIDE system, the PUMAGRIP rubber outsole ensures multi-surface traction, while the engineered mesh upper offers breathability and durability. Enjoy a smooth, stable ride with every stride.",
+    imgSrc: [
+        "src/assets/images/PUMA-WOMEN-4.avif",  // Front view
+        "src/assets/images/PUMA-WOMEN-4.2.avif",   // Side view
+        "src/assets/images/PUMA-WOMEN-4.3.avif",   // Back view
+        "src/assets/images/PUMA-WOMEN-4.4.avif"     // Top view
+    ]
+  },
+  {
+    id: 39,
+    itemName: "ForeverRun NITRO™",
+    sizes: ["5UK", "6UK", "6.5UK"],
+    price: "₱8,700",
+    quantity: 100,
+    brand: "PUMA",
+    ratingCount: 250,
+    description: "Experience unparalleled support with ForeverRun NITRO™ for women. Featuring NITROFOAM™ cushioning and our RUNGUIDE system, the PUMAGRIP rubber outsole ensures multi-surface traction, while the engineered mesh upper offers breathability and durability. Enjoy a smooth, stable ride with every stride.",
+    imgSrc: [
+        "src/assets/images/PUMA-WOMEN-4.avif",  // Front view
+        "src/assets/images/PUMA-WOMEN-4.2.avif",   // Side view
+        "src/assets/images/PUMA-WOMEN-4.3.avif",   // Back view
+        "src/assets/images/PUMA-WOMEN-4.4.avif"     // Top view
+    ]
+  },
 ]
+
+
