@@ -1,7 +1,8 @@
-export const user = [
+const storedUser = [
   {
-    username: "user123",
-    password: "userpassword",
+    username: "jeremy123",
+    email: "jeremy123@gmail.com",
+    password: "mypassword123",
     usertype: "user",
     cart: [],
   },
@@ -11,7 +12,11 @@ export const user = [
     userType: "admin",
   },
 ];
+localStorage.setItem("user-data", JSON.stringify(storedUser));
 
+export const user = JSON.parse(localStorage.getItem("user-data"));
+
+console.log(user);
 export const products = [
   // ADIDAS MEN
   {
