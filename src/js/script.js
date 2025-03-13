@@ -130,7 +130,7 @@ function renderSelectedCategory(e) {
 
 function viewProduct(e, item) {
   e.preventDefault();
-  window.location.href = `../html/productView.html?data=${encodeURIComponent(
+  window.location.href = `../html/productViewcopy.html?data=${encodeURIComponent(
     JSON.stringify(item)
   )}`;
 }

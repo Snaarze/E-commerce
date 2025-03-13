@@ -8,11 +8,10 @@ const productPrice = document.querySelector(".product-price");
 const productRating = document.querySelector(".item-rating");
 const addCartBtn = document.querySelector(".add-to-cart-btn");
 const cartCount = document.querySelector(".cart-count");
-const productQuantity = document.querySelector("#quantity");
+const productQuantity = document.querySelector(".quantity");
 const mainImg = document.querySelector(".main-product");
-const productOtherImg = document.querySelectorAll(
-  ".product-left-container div img"
-);
+const totalPrice = document.querySelector(".total-amount");
+const productOtherImg = document.querySelectorAll("#shoe-details img");
 const similarContainer = document.querySelector(".similar-container");
 const cartActionModal = document.querySelector(".cart-action-modal");
 const descriptionItem = document.querySelector(".description");
@@ -30,14 +29,14 @@ const itemData = JSON.parse(decodeURIComponent(params.get("data")));
 function displayProduct() {
   const params = new URLSearchParams(window.location.search);
   const itemData = JSON.parse(decodeURIComponent(params.get("data")));
+  console.log(itemData);
   //   change the product count
   productCount.textContent = ` All Products (${products.length})`;
   productName.textContent = `${itemData.itemName}`;
   productPrice.textContent = `${itemData.price}`;
   mainImg.src = itemData.imgSrc[0];
   productRating.textContent = ` ${itemData.ratingCount} Ratings`;
-  console.log(loggedUser);
-
+  totalPrice.textContent = `${itemData.price}`;
   const findDuplicate = loggedUser?.cart.find(
     (product) => product.itemName === itemData.itemName
   );
@@ -158,7 +157,7 @@ function createSimilarItems(array) {
 
   let displayedIndexes = [];
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 4; i++) {
     let randomNumber;
 
     do {
@@ -175,57 +174,56 @@ function createSimilarItems(array) {
     console.log(filteredSimilarProduct[randomNumber].imgSrc);
     console.log(randomNumber);
 
-    const liContainer = document.createElement("li");
-    const productTag = document.createElement("a");
-    const img = document.createElement("img");
-    img.src = filteredSimilarProduct[randomNumber].imgSrc[0];
-    img.classList.add("product-img");
+    const otherShoesSection = document.querySelector(".other-shoes-section");
+    const otherShoesList = document.createElement("ul");
+    otherShoesList.classList.add("other-shoes");
 
-    const infoContainer = document.createElement("div");
-    infoContainer.classList.add("item-info-container");
+    const liImage = document.createElement("li");
+    const shoeImage = document.createElement("img");
+    shoeImage.src = filteredSimilarProduct[randomNumber].imgSrc[0];
+    shoeImage.alt = "shoe image";
+    liImage.appendChild(shoeImage);
 
-    const leftContainer = document.createElement("div");
-    leftContainer.classList.add("info-left-container");
+    const detailsContainer = document.createElement("div");
+    detailsContainer.classList.add("other-shoes-details");
 
-    const shoeNameText = document.createElement("p");
-    shoeNameText.textContent = filteredSimilarProduct[randomNumber].itemName;
-    shoeNameText.classList.add("similar-product-name");
+    const liShoeName = document.createElement("li");
+    liShoeName.textContent = filteredSimilarProduct[randomNumber].itemName;
+    liShoeName.classList = "shoe-name";
 
-    const ratingContainer = document.createElement("div");
-    ratingContainer.classList.add("star-container");
+    detailsContainer.appendChild(liShoeName);
 
-    leftContainer.append(shoeNameText);
-    infoContainer.appendChild(leftContainer);
+    const ratingDiv = document.createElement("div");
+    const liStars = document.createElement("li");
+    liStars.id = "star";
 
     for (let j = 0; j < 5; j++) {
-      // Loop for stars
       const starImg = document.createElement("img");
-      starImg.classList.add("star");
       starImg.src = "../assets/images/star.png";
-      ratingContainer.appendChild(starImg);
+      starImg.alt = "star";
+      liStars.appendChild(starImg);
     }
 
     const ratings = document.createElement("p");
-    ratings.classList.add("similar-item-rating");
-    ratings.textContent = `${filteredSimilarProduct[randomNumber].ratingCount} ratings`;
+    ratings.textContent = `${filteredSimilarProduct[randomNumber].ratingCount} Rating`;
 
-    ratingContainer.appendChild(ratings);
+    const priceSpan = document.createElement("span");
+    priceSpan.textContent = `$${filteredSimilarProduct[randomNumber].price}`;
+    priceSpan.classList = "other-price-item";
+    ratingDiv.appendChild(liStars);
+    ratingDiv.appendChild(ratings);
+    ratingDiv.appendChild(priceSpan);
+    detailsContainer.appendChild(ratingDiv);
 
-    const shoePrice = document.createElement("p");
-    shoePrice.textContent = `$ ${filteredSimilarProduct[randomNumber].price}`;
-    shoePrice.classList.add("similar-item-price");
+    // Append all elements to the list
+    otherShoesList.appendChild(liImage);
+    otherShoesList.appendChild(detailsContainer);
 
-    leftContainer.appendChild(ratingContainer);
+    // Append to the section
+    otherShoesSection.appendChild(otherShoesList);
 
-    // Append all the children to their respective parent
-    productTag.appendChild(img);
-    productTag.appendChild(infoContainer);
-    liContainer.appendChild(productTag);
-    infoContainer.appendChild(shoePrice);
-    similarContainer.appendChild(liContainer);
-
-    // Add event for productTag
-    liContainer.addEventListener("click", (e) => {
+    // Add event listener for navigation
+    otherShoesList.addEventListener("click", (e) => {
       viewProduct(e, filteredSimilarProduct[randomNumber]);
     });
   }
@@ -294,7 +292,7 @@ function createSimilarItems(array) {
 
 function viewProduct(e, item) {
   e.preventDefault();
-  window.location.href = `../html/productView.html?data=${encodeURIComponent(
+  window.location.href = `../html/productViewCopy.html?data=${encodeURIComponent(
     JSON.stringify(item)
   )}`;
 }

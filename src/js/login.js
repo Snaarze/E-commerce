@@ -121,18 +121,18 @@ function showError() {
   validationText.className = "error active";
 }
 
-function checkLoginUser() {
-  let user = JSON.parse(localStorage.getItem("user"));
-  if (user) {
-    emailLogged.textContent = user.email;
-    btnLogged.classList.remove("hide-btn");
-    btnInteraction.classList.add("hide-btn");
-  } else {
-    btnLogged.classList.add("hide-btn");
-    btnInteraction.classList.remove("hide-btn");
-  }
-}
+// function checkLoginUser() {
+//   let user = JSON.parse(localStorage.getItem("user"));
+//   if (user) {
+//     emailLogged.textContent = user.email;
+//     btnLogged.classList.remove("hide-btn");
+//     btnInteraction.classList.add("hide-btn");
+//   } else {
+//     btnLogged.classList.add("hide-btn");
+//     btnInteraction.classList.remove("hide-btn");
+//   }
+// }
 
-checkLoginUser();
+// checkLoginUser();
 
 export const loggedUser = JSON.parse(localStorage.getItem("user"));
