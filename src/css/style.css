@@ -269,6 +269,7 @@ main {
 
 .product-img {
   background-color: #edeef2;
+  max-height: 300px;
 }
 
 .star {
