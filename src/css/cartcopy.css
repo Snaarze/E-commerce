@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+}
+
+.shoes-logo {
+    height: 20px;
+}
+
+aside {
+    background: #1C304F;
+    min-height: 100vh;
+    width: 100px;
+}
+
+body div {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 40px;
+}
+
+header ul li {
+    display: flex;
+    gap: 50px;
+}
+
+header ul button {
+    background-color: white;
+    border-style: none;
+    align-items: center;
+    display: flex;
+}
+
+header ul button img {
+    width: 40px;
+}
+
+header ul form {
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0.3px 0.3px 0px 0px;
+    width: 50%;
+}
+
+header ul form input {
+    padding: 5px;
+    border: none;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    margin: 60px;
+}
+
+main .container-1 {
+    box-shadow: 0.3px 0.3px 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    border-radius: 10px;
+    gap: 15px;
+    width: 40%;
+    height: 10%;
+
+    a {
+        text-decoration: none;
+        color: #1C304F;
+        border: 1px solid gray;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+
+main .container-2 {
+    height: auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    background: #1C304F;
+    padding: 40px;
+    color: white;
+    border-radius: 20px;
+    gap: 40px;
+}
+
+main .container-2 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main .container-2 ul li {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+main .container-2 ul li span {
+    color: #969494;
+}
+
+main .container-2 ul li input {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+main .container-2 button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+#total-amount {
+    border-top: 1px solid white;
+    padding-top: 20px;
+
+    span {
+        color: white;
+    }
+}
