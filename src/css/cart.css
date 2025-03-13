@@ -182,6 +182,7 @@ main section ul li {
 .remove-btn i {
   font-size: 24px;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 main section ul li img {
@@ -285,7 +286,7 @@ main .shipping-information ul a {
   align-items: center;
 }
 
-.checkout a {
+.checkout button {
   justify-content: center;
   display: flex;
   border-radius: 10px;
@@ -296,4 +297,55 @@ main .shipping-information ul a {
   padding: 15px;
   height: auto;
   width: 100%;
+  border: none;
+}
+
+#checkout-modal #header {
+  margin: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#checkout-modal #header div {
+  display: flex;
+}
+
+#checkout-modal ul li img {
+  width: 80px;
+}
+
+#checkout-modal ul {
+  margin: 40px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#checkout-modal ul button {
+  background-color: #9c89ff;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  font-weight: bold;
+  color: white;
+}
+
+#checkout-modal ul li {
+  gap: 10px;
+  display: flex;
+}
+
+#checkout-modal ul li .card-details {
+  font-weight: bold;
+}
+
+#checkout-modal ul .total-amount {
+  display: flex;
+  justify-content: end;
+}
+
+#checkout-modal ul li input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid gray;
 }

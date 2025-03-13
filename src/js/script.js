@@ -16,6 +16,7 @@ function renderAllProduct() {
   while (productContainer.firstChild) {
     productContainer.removeChild(productContainer.firstChild);
   }
+
   productCount.textContent = `All Products (${products.length})`;
   //   re-render each item of the products
   createProduct(products);
@@ -27,8 +28,8 @@ function createProduct(array) {
     const liContainer = document.createElement("li");
     const productTag = document.createElement("a");
     const img = document.createElement("img");
-    img.src = item.imgSrc[0];
     img.classList.add("product-img");
+    img.src = item.imgSrc[0];
 
     const infoContainer = document.createElement("div");
     infoContainer.classList.add("info-container");
