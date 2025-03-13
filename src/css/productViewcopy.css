@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+.hide-btn {
+  display: none;
+}
+
 body {
   display: flex;
   font-family: "Inter", sans-serif;
@@ -117,8 +121,29 @@ main header div a,
 }
 
 #quantity {
+  position: relative;
   display: flex;
   gap: 10px;
+}
+
+/* Tooltip text */
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.quantity:hover .tooltiptext {
+  visibility: visible;
 }
 
 #quantity input {
@@ -173,6 +198,21 @@ main header div a,
   border-radius: 20px;
   flex-basis: 400px;
   cursor: pointer;
+}
+
+.other-shoes:hover {
+  transform: scale(1.1);
+}
+
+.signup-btn,
+.add-to-cart-btn,
+.login-btn {
+  border: none;
+}
+
+.product-link {
+  text-decoration: none;
+  color: black;
 }
 
 .other-shoes li {
@@ -253,4 +293,242 @@ input[type="number"] {
 button.add-to-cart-btn:disabled {
   background-color: #395d92 !important;
   cursor: not-allowed !important;
+}
+
+/* login-modal-dialog */
+
+.login-form {
+  width: 500px;
+  border: 1px gray solid;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 0.3px;
+}
+
+.login-form header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-form header img {
+  width: 80px;
+}
+
+.login-form header button {
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  background: #c0b4ae50;
+  border-style: none;
+  color: red;
+}
+
+.login-form section {
+  margin: 40px;
+}
+
+.login-form section ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-form section ul li {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form section ul li button {
+  border: none;
+  background-color: white;
+  text-decoration: underline;
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-form form li {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form form li p {
+  font-size: small;
+  margin: 0;
+  padding: 5px;
+}
+
+.login-form form li input {
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid gray;
+}
+
+.login-form form button {
+  margin-top: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  color: black;
+}
+
+/* register-modal-dialog */
+
+.signup-form {
+  width: 500px;
+  border: 1px gray solid;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 0.3px;
+}
+
+.signup-form header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.signup-form header img {
+  width: 80px;
+}
+
+.signup-form header button {
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  background: #c0b4ae50;
+  border-style: none;
+  color: red;
+}
+
+.signup-form section {
+  margin: 40px;
+}
+
+.signup-form section ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.signup-form section ul li {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-form section ul li button {
+  border-style: none;
+  background-color: white;
+  text-decoration: underline;
+}
+
+.signup-form form ul {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.signup-form form ul li input {
+  border: 1px solid gray;
+  border-radius: 10px;
+  display: flex;
+  width: 100%;
+  padding: 10px;
+}
+
+.signup-form form button {
+  margin-top: 40px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+dialog.signup-form,
+dialog.login-form {
+  position: fixed;
+  top: 10%;
+  left: 40%;
+  border: none;
+  border-radius: 25px;
+}
+
+dialog.cart-action-modal {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  border: none;
+  border-radius: 25px;
+  width: 400px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.profile-img {
+  width: 40px;
+}
+
+.logged-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.increase-quantity,
+.decrease-quantity {
+  border: none;
+  background-color: white;
+}
+
+.other-image-item {
+  min-height: 400px;
+}
+
+#addtocart-modal li {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+#addtocart-modal ul li p {
+  padding-right: 50px;
+}
+
+#green-check {
+  font-size: 30px;
+  color: green;
+}
+
+#x-button {
+  color: red;
+}
+
+input:invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+/* error message styles */
+.validation-text {
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  font-size: 80%;
+  color: red;
+  border-radius: 0 0 5px 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.validation-text.active {
+  padding: 0.3em;
 }

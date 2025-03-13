@@ -7,7 +7,6 @@ const openForm = document.querySelector(".login-form");
 const submitBtn = document.querySelector(".submit-btn");
 const emailInput = document.querySelector("#email_login");
 const passwordInput = document.querySelector("#password_login");
-const emailLogged = document.querySelector(".email-logged");
 const btnInteraction = document.querySelector(".btn-interaction");
 const btnLogged = document.querySelector(".logged-container");
 const signupModalBtn = document.querySelector(".signup-modal-btn");
@@ -121,18 +120,23 @@ function showError() {
   validationText.className = "error active";
 }
 
-// function checkLoginUser() {
-//   let user = JSON.parse(localStorage.getItem("user"));
-//   if (user) {
-//     emailLogged.textContent = user.email;
-//     btnLogged.classList.remove("hide-btn");
-//     btnInteraction.classList.add("hide-btn");
-//   } else {
-//     btnLogged.classList.add("hide-btn");
-//     btnInteraction.classList.remove("hide-btn");
-//   }
-// }
+function checkLoginUser() {
+  console.log(window.location.href);
+  if (
+    window.location.href === "http://127.0.0.1:5500/src/html/productView.html"
+  ) {
+    window.location.href = "http://127.0.0.1:5500/src/html/notFound.html";
+  }
+  let user = JSON.parse(localStorage.getItem("user"));
+  if (user) {
+    btnLogged.classList.remove("hide-btn");
+    btnInteraction.classList.add("hide-btn");
+  } else {
+    btnLogged.classList = "hide-btn";
+    btnInteraction.classList.remove("hide-btn");
+  }
+}
 
-// checkLoginUser();
+checkLoginUser();
 
 export const loggedUser = JSON.parse(localStorage.getItem("user"));

@@ -22,14 +22,15 @@
             </li>
             <li>
                 <a href="landing.html">Home</a>
-                <a href="">Categories</a>
-                <a href="">About Us</a>
+                <a href="./index.html">Categories</a>
+                <a href="./index.html">About Us</a>
             </li>
         </ul>
     </aside>
     <main>
         <header>
-            <a href="../html/index.html"><i class="fa-solid fa-less-than"></i> <span class="product-link-count">All
+            <a href="../html/index.html" class="product-link"><i class="fa-solid fa-less-than"></i> <span
+                    class="product-link-count">All
                     Products</span></a>
             <div>
                 <form>
@@ -37,8 +38,14 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </form>
                 <a href="../html/cart.html" class="cart-count"><i class="fa-solid fa-cart-shopping"></i> Cart (0)</a>
-                <button class="signup-btn">Signup</button>
-                <button class="login-btn"> Login</button>
+                <div class="btn-interaction">
+                    <button class="signup-btn">Signup</button>
+                    <button class="login-btn"> Login</button>
+                </div>
+                <li class="hide-btn logged-container">
+                    <img src="../assets/images/fb-icon.png" class="profile-img" alt="test">
+                    <button class="logout-btn">Log out</button>
+                </li>
             </div>
         </header>
         <section class="product-details">
@@ -66,10 +73,11 @@
                     <div id="container">
                         <p>Quantity</p>
                         <div id="quantity">
+                            <span class="tooltiptext">Tooltip text</span>
                             <input type="number" class="quantity" value="0" min="0">
                             <div id="arrows">
-                                <i class="fa-solid fa-angle-up"></i>
-                                <i class="fa-solid fa-angle-down"></i>
+                                <button class="increase-quantity"> <i class="fa-solid fa-angle-up"></i></button>
+                                <button class="decrease-quantity"> <i class="fa-solid fa-angle-down"></i></button>
                             </div>
                         </div>
                     </div>
@@ -106,6 +114,7 @@
         </section>
     </main>
 
+    <!-- dialog form for login -->
     <dialog class="login-form">
         <div class="container">
             <section>
@@ -125,6 +134,7 @@
                 <form>
                     <li>
                         <p>Email</p>
+                        <span class="validation-text"></span>
                         <input type="email" placeholder="Email Address" id="email_login">
                     </li>
                     <li>
@@ -177,7 +187,7 @@
     <dialog class="cart-action-modal">
         <div id="addtocart-modal">
             <ul>
-                <li>
+                <li class="cart-info">
                     <i class="fa-solid fa-circle-check" id="green-check"></i>
                     <p>Added to cart successfully!</p>
                     <i class="fa-solid fa-xmark" id="x-button"></i>
