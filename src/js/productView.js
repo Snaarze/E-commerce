@@ -31,7 +31,7 @@ function displayProduct() {
   const params = new URLSearchParams(window.location.search);
   const itemData = JSON.parse(decodeURIComponent(params.get("data")));
   //   change the product count
-  productCount.textContent = ` << All Products (${products.length})`;
+  productCount.textContent = ` All Products (${products.length})`;
   productName.textContent = `${itemData.itemName}`;
   productPrice.textContent = `${itemData.price}`;
   mainImg.src = itemData.imgSrc[0];
