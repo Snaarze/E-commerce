@@ -39,6 +39,11 @@ main,
   flex-direction: column;
 }
 
+button.add-to-cart-btn:disabled {
+  background-color: rgb(108, 108, 245) !important;
+  cursor: not-allowed !important;
+}
+
 .product-container,
 .product-left-container div,
 .product-right-container ul,
