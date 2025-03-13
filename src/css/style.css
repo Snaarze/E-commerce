@@ -271,6 +271,7 @@ main {
 .product-img {
   flex-basis: 300px;
   background-color: #edeef2;
+  max-height: 300px;
 }
 
 .star {
