@@ -7,6 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/productView.css">
+    <link rel="stylesheet" href="../css/loginmodal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -16,41 +20,46 @@
             <li><a href="#"><img src="../assets/images/menu.png" alt="PRODUCT_VIEW"></a></li>
         </ul>
     </aside>
-    <header>
+    <header class="header-title">
         <ul>
             <li><img src="../assets/images/Nike-Logo.png" alt="shoe logo">
                 <p>Let's order fresh items for you</p>
             </li>
-            <li>
-                <a href="#"><button>Signup</button></a>
-                <a href="#"><button class="login-btn">Login</button></a>
+            <li class="btn-interaction">
+                <button class="signup-btn">Signup</button>
+                <button class="login-btn">Login</button>
+            </li>
+            <li class="hide-btn logged-container">
+                <img src="" alt="test">
+                <span class="email-logged"></span>
+                <button class="logout-btn">Log out</button>
             </li>
         </ul>
     </header>
-    <form>
+    <form class="form-title">
         <ul>
             <li>
                 <input type="text" placeholder="Search Products">
                 <img src="../assets/images/search icon.png" alt="magnify-icon">
-                <a href="../html/cart.html"> <img src="../assets/images/cart icon.png" alt="cart-icon">
-                    <span class="cart-count"></span></a>
-
+                <a href="../html/cart.html" class="cart-button"><img src="../assets/images/cart icon.png"
+                        alt="cart-icon"> <span class="cart-count"></span></a>
             </li>
         </ul>
     </form>
     <main>
-        <a href="../html/index.html" class="product-link-count"></a>
+        <a href="../html/index.html">
+            <span><i class="fa-solid fa-less-than"></i></span>
+            <span class="product-link-count"></span>
+        </a>
         <section class="product-container">
             <div class="product-left-container">
-                <img src="../assets/images/adidas.png" alt="">
-                <ul>
-                    <li>
-                        <img src="../assets/images/adidas.png" alt="">
-                    </li>
-                    <li> <img src="../assets/images/adidas.png" alt=""></li>
-                    <li> <img src="../assets/images/adidas.png" alt=""></li>
-                    <li> <img src="../assets/images/adidas.png" alt=""></li>
-                </ul>
+                <img src="../assets/images/adidas.png" alt="" class="main-product">
+                <div class="other-img-container">
+                    <img class="front-view" src="../assets/images/all-product-icon.png" alt="">
+                    <img class="side-view" src="../assets/images/Nike-Logo.png" alt="">
+                    <img class="back-view" src="../assets/images/adidas.png" alt="">
+                    <img class="top-view" src="../assets/images/adidas.png" alt="">
+                </div>
             </div>
             <div class="product-right-container">
                 <h3 class="product-name"> Vegetables</h3>
@@ -62,7 +71,7 @@
                     <img src="../assets/images/star.png" alt="" class="star">
                     <p class="item-rating">36 ratings</p>
                 </div>
-                <p>
+                <p class="description">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla consequatur ipsum voluptatem earum!
                     Quaerat fugit atque, voluptatibus tempora similique nobis laboriosam aspernatur voluptas quod hic
                     quisquam praesentium iusto quasi temporibus.
@@ -70,7 +79,7 @@
                 <ul>
                     <li class="product-action-container">
                         <label for="quantity">Quantity</label>
-                        <input type="number" name="quantity" id="quantity">
+                        <input type="number" name="quantity" id="quantity" value="1" min="0">
                     </li>
                     <li class="product-action-container">
                         <span>Total Amount : </span>
@@ -85,8 +94,8 @@
         </section>
         <section class="similar-items-container">
             <h4>Similar Items</h4>
-            <ul>
-                <li>
+            <ul class="similar-container">
+                <!-- <li>
                     <img src="../assets/images/adidas.png" alt="">
                     <div class="item-info-container">
                         <div class="info-left-container">
@@ -102,11 +111,91 @@
                         </div>
                         <p class="similar-item-price"> $10</p>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </section>
     </main>
-    <script type="module" src="../js/login.js"></script>
+
+    <!-- dialog form for login -->
+    <dialog class="login-form">
+        <div class="container">
+            <section>
+                <header>
+                    <img src="../assets/images/Nike-Logo.png" alt="">
+                    <button class="close-form-btn">X</button>
+                </header>
+                <ul>
+                    <li>
+                        <i class="fa-regular fa-face-smile"></i>
+                        <p>Login to order</p>
+                    </li>
+                    <li>
+                        <button class="signup-modal-btn">New Member? Register here.</button>
+                    </li>
+                </ul>
+                <form>
+                    <li>
+                        <p>Email</p>
+                        <input type="email" placeholder="Email Address" id="email_login">
+                    </li>
+                    <li>
+                        <input type="password" placeholder="Password" id="password_login">
+                    </li>
+                    <button class="submit-btn">Sign In</button>
+                </form>
+            </section>
+        </div>
+    </dialog>
+
+    <dialog class="signup-form">
+        <div class="container">
+            <section>
+                <header>
+                    <img src="../assets/images/Nike-Logo.png" alt="">
+                    <button class="close-signup-btn">X</button>
+                </header>
+                <ul>
+                    <li>
+                        <i class="fa-regular fa-face-smile"></i>
+                        <p>Login to order</p>
+                    </li>
+                    <li>
+                        <button class="member-btn">Already a member? Login here.</button>
+                    </li>
+                </ul>
+                <form>
+                    <ul>
+                        <li>
+                            <input type="text" placeholder="Firstname">
+                            <input type="text" placeholder="Firstname">
+                        </li>
+                        <li>
+                            <input type="email" placeholder="Email">
+                        </li>
+                        <li>
+                            <input type="password" placeholder="Password">
+                        </li>
+                        <li>
+                            <input type="password" placeholder="Confirm Password">
+                        </li>
+                    </ul>
+                    <button>Sign Up</button>
+                </form>
+            </section>
+        </div>
+    </dialog>
+
+    <dialog class="cart-action-modal">
+        <div id="addtocart-modal">
+            <ul>
+                <li>
+                    <i class="fa-solid fa-circle-check" id="green-check"></i>
+                    <p>Added to cart successfully!</p>
+                    <i class="fa-solid fa-xmark" id="x-button"></i>
+                </li>
+            </ul>
+        </div>
+    </dialog>
     <script type="module" src="../js/productView.js"></script>
 </body>
 

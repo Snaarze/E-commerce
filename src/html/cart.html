@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/loginmodal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
     <aside>
         <ul>
             <li><img src="../assets/images/Nike-Logo.png" alt="logo"></li>
-            <li><a href=""><i class="fa-solid fa-bars"></i></a></li>
+            <li><a href="index.html"><i class="fa-solid fa-bars"></i></a></li>
         </ul>
     </aside>
     <div class="container">
@@ -24,8 +26,18 @@
                 <li><img src="../assets/images/Nike-Logo.png" alt="shoe logo">
                     <p>Let's order fresh items for you</p>
                 </li>
-                <li>
-                    <a href="#"><button><img src="" alt="Profile Icon"></button></a>
+                <li class="btn-interaction">
+                    <button class="signup-btn">Signup</button>
+                    <button class="login-btn">Login</button>
+                </li>
+                <li class="hide-btn logged-container">
+                    <span class="email-logged"></span>
+                    <div class="account-container">
+                        <img src="../assets/images/fb-icon.png" alt="test" class="fb-icon">
+                        <dialog open class="logout-modal">
+                            <button class="logout-btn">Log out</button>
+                        </dialog>
+                    </div>
                 </li>
             </ul>
         </header>
@@ -34,13 +46,15 @@
                 <input type="text" placeholder="Search Products">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <a href="../html/cart.html"><i class="fa-solid fa-cart-shopping"></i> <span class="cart-count">Cart
-                    (0)</span></a>
+            <a href="../html/cart.html"><i class="fa-solid fa-cart-shopping"></i> <span class="cart-count"></span></a>
         </form>
         <main>
             <section>
                 <ul class="cart-list-container">
-
+                    <li class="no-cart-item">
+                        There are no items in this cart
+                        <a href="../html/index.html">Continue shopping</a>
+                    </li>
                 </ul>
             </section>
             <div class="shipping-information">
@@ -63,23 +77,124 @@
                         <h4>Order Summary</h4>
                         <li>
                             <p>Items</p>
-                            <p>$40</p>
+                            <p class="total-items-amount">$40</p>
                         </li>
                         <li class="shipping-fee">
                             <p>Shipping Fee</p>
-                            <p>$5</p>
+                            <p class="shipping-fee-price">$5</p>
                         </li>
                         <li>
                             <p>Total Amount</p>
-                            <p>$45</p>
+                            <p class="total-amount">$45</p>
                         </li>
                     </div>
                     <div class="checkout">
-                        <a href="">Proceed to Checkout</a>
+                        <button href="" class="checkout-btn">Proceed to Checkout</button>
                     </div>
                 </ul>
             </div>
         </main>
+        <!-- dialog form for login -->
+        <dialog class="login-form">
+            <div class="container">
+                <section>
+                    <header>
+                        <img src="../assets/images/Nike-Logo.png" alt="">
+                        <button class="close-form-btn">X</button>
+                    </header>
+                    <ul>
+                        <li>
+                            <i class="fa-regular fa-face-smile"></i>
+                            <p>Login to order</p>
+                        </li>
+                        <li>
+                            <button class="signup-modal-btn">New Member? Register here.</button>
+                        </li>
+                    </ul>
+                    <form>
+                        <li>
+                            <p>Email</p>
+                            <span class="validation-text"></span>
+                            <input type="email" placeholder="Email Address" id="email_login">
+                        </li>
+                        <li>
+                            <input type="password" placeholder="Password" id="password_login">
+                        </li>
+                        <button class="submit-btn">Sign In</button>
+                    </form>
+                </section>
+            </div>
+        </dialog>
+
+        <dialog class="signup-form">
+            <div class="container">
+                <section>
+                    <header>
+                        <img src="../assets/images/Nike-Logo.png" alt="">
+                        <button class="close-signup-btn">X</button>
+                    </header>
+                    <ul>
+                        <li>
+                            <i class="fa-regular fa-face-smile"></i>
+                            <p>Login to order</p>
+                        </li>
+                        <li>
+                            <button class="member-btn">Already a member? Login here.</button>
+                        </li>
+                    </ul>
+                    <form>
+                        <ul>
+                            <li>
+                                <input type="text" placeholder="Firstname">
+                                <input type="text" placeholder="Firstname">
+                            </li>
+                            <li>
+                                <input type="email" placeholder="Email">
+                            </li>
+                            <li>
+                                <input type="password" placeholder="Password">
+                            </li>
+                            <li>
+                                <input type="password" placeholder="Confirm Password">
+                            </li>
+                        </ul>
+                        <button>Sign Up</button>
+                    </form>
+                </section>
+            </div>
+        </dialog>
+
+        <dialog class="payment-modal">
+            <div id="checkout-modal">
+                <ul>
+                    <li id="header">
+                        <div>
+                            <img src="../assets/images/Nike-Logo.png" alt="">
+                            <img src="../assets/images/visa-logo.png" alt="Visa logo">
+                            <img src="../assets/images/mastercard-logo.png" alt="mastercard logo">
+                        </div>
+                        <i class="fa-solid fa-xmark" id="x-button"></i>
+                    </li>
+                    <li>
+                        <p class="card-details">Card Details</p>
+                    </li>
+                    <li>
+                        <input type="text" placeholder="Card Name">
+                    </li>
+                    <li>
+                        <input type="text" placeholder="Card Number">
+                    </li>
+                    <li>
+                        <input type="text" placeholder="Expiration">
+                        <input type="text" placeholder="CVC">
+                    </li>
+                    <li class="total-amount">
+                        <p>Total Amount <span>$45</span></p>
+                    </li>
+                    <button>Pay</button>
+                </ul>
+            </div>
+        </dialog>
     </div>
     <script type="module" src="../js/cart.js"></script>
 </body>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/loginmodal.css">
 </head>
 
 <body>
@@ -15,24 +16,30 @@
             <li><a href="#"><img src="../assets/images/menu.png" alt="PRODUCT_VIEW"></a></li>
         </ul>
     </aside>
-    <header>
+    <header class="header-title">
         <ul>
             <li><img src="../assets/images/Nike-Logo.png" alt="shoe logo">
                 <p>Let's order fresh items for you</p>
             </li>
-            <li>
+            <li class="btn-interaction">
                 <button class="signup-btn">Signup</button>
                 <button class="login-btn">Login</button>
             </li>
+            <li class="hide-btn logged-container">
+                <img src="" alt="test">
+                <span class="email-logged"></span>
+                <button class="logout-btn">Log out</button>
+            </li>
         </ul>
     </header>
-    <form>
+    <form class="form-title">
         <ul>
             <li>
                 <input type="text" placeholder="Search Products">
                 <img src="../assets/images/search icon.png" alt="magnify-icon">
-                <a href="#"><button class="cart-button"><img src="../assets/images/cart icon.png"
-                            alt="cart-icon"></button></a>
+                <a href="../html/cart.html" class="cart-button"><img src="../assets/images/cart icon.png"
+                        alt="cart-icon">
+                    <span class="cart-count"></span></a>
             </li>
         </ul>
     </form>
@@ -75,6 +82,76 @@
             </ul>
         </div>
     </main>
+    <!-- dialog form for login -->
+    <dialog class="login-form">
+        <div class="container">
+            <section>
+                <header>
+                    <img src="../assets/images/Nike-Logo.png" alt="">
+                    <button class="close-form-btn">X</button>
+                </header>
+                <ul>
+                    <li>
+                        <i class="fa-regular fa-face-smile"></i>
+                        <p>Login to order</p>
+                    </li>
+                    <li>
+                        <button class="signup-modal-btn">New Member? Register here.</button>
+                    </li>
+                </ul>
+                <form>
+                    <li>
+                        <p>Email</p>
+                        <span class="validation-text"></span>
+                        <input type="email" placeholder="Email Address" id="email_login">
+                    </li>
+                    <li>
+                        <input type="password" placeholder="Password" id="password_login">
+                    </li>
+                    <button class="submit-btn">Sign In</button>
+                </form>
+            </section>
+        </div>
+    </dialog>
+
+    <dialog class="signup-form">
+        <div class="container">
+            <section>
+                <header>
+                    <img src="../assets/images/Nike-Logo.png" alt="">
+                    <button class="close-signup-btn">X</button>
+                </header>
+                <ul>
+                    <li>
+                        <i class="fa-regular fa-face-smile"></i>
+                        <p>Login to order</p>
+                    </li>
+                    <li>
+                        <button class="member-btn">Already a member? Login here.</button>
+                    </li>
+                </ul>
+                <form>
+                    <ul>
+                        <li>
+                            <input type="text" placeholder="Firstname">
+                            <input type="text" placeholder="Firstname">
+                        </li>
+                        <li>
+                            <input type="email" placeholder="Email">
+                        </li>
+                        <li>
+                            <input type="password" placeholder="Password">
+                        </li>
+                        <li>
+                            <input type="password" placeholder="Confirm Password">
+                        </li>
+                    </ul>
+                    <button>Sign Up</button>
+                </form>
+            </section>
+        </div>
+    </dialog>
+
     <script type="module" src="../js/script.js"></script>
     <script type="module" src="../js//login.js"></script>
 </body>

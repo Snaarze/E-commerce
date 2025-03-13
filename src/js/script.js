@@ -1,17 +1,22 @@
 import { products } from "./data.js";
-import { user } from "./data.js";
-const cartBtn = document.querySelector(".cart-button");
+import { loggedUser } from "./login.js";
+const cartCount = document.querySelector(".cart-count");
 const productContainer = document.querySelector(".product-container");
 const categoriesContainer = document.querySelector(".categories ul");
 const productCount = document.querySelector(".product-count");
 
-cartBtn.textContent = `Cart (${user[0].cart.length ? 0 : user[0].cart.length})`;
+if (loggedUser) {
+  cartCount.textContent = `Cart (${loggedUser.cart.length})`;
+} else {
+  cartCount.textContent = "Cart (0)";
+}
 
 function renderAllProduct() {
   // remove all the section child if any existing
   while (productContainer.firstChild) {
     productContainer.removeChild(productContainer.firstChild);
   }
+
   productCount.textContent = `All Products (${products.length})`;
   //   re-render each item of the products
   createProduct(products);
@@ -23,8 +28,8 @@ function createProduct(array) {
     const liContainer = document.createElement("li");
     const productTag = document.createElement("a");
     const img = document.createElement("img");
-    img.src = "../assets/images/shoe1.png";
     img.classList.add("product-img");
+    img.src = item.imgSrc[0];
 
     const infoContainer = document.createElement("div");
     infoContainer.classList.add("info-container");
@@ -51,7 +56,7 @@ function createProduct(array) {
 
     const ratings = document.createElement("p");
     ratings.classList.add("ratings");
-    ratings.textContent = "36 Ratings";
+    ratings.textContent = `${item.ratingCount} ratings`;
 
     ratingContainer.appendChild(ratings);
 
@@ -125,7 +130,7 @@ function renderSelectedCategory(e) {
 
 function viewProduct(e, item) {
   e.preventDefault();
-  window.location.href = `../html/productView.html?data=${encodeURIComponent(
+  window.location.href = `../html/productViewcopy.html?data=${encodeURIComponent(
     JSON.stringify(item)
   )}`;
 }

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/productViewcopy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <aside>
+        <ul>
+            <li>
+                <img src="../assets/images/shoe-logo-white.png" alt="shoes logo">
+            </li>
+            <li>
+                <a href="landing.html">Home</a>
+                <a href="">Categories</a>
+                <a href="">About Us</a>
+            </li>
+        </ul>
+    </aside>
+    <main>
+        <header>
+            <a href="../html/index.html"><i class="fa-solid fa-less-than"></i> <span class="product-link-count">All
+                    Products</span></a>
+            <div>
+                <form>
+                    <input type="text" placeholder="Search products">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </form>
+                <a href="../html/cart.html" class="cart-count"><i class="fa-solid fa-cart-shopping"></i> Cart (0)</a>
+                <button class="signup-btn">Signup</button>
+                <button class="login-btn"> Login</button>
+            </div>
+        </header>
+        <section class="product-details">
+            <img src="../assets/images/ADIDAS-MEN-1.avif" alt="product-img" class="product-img main-product">
+            <ul>
+                <li>
+                    <h2 class="product-name">Zion 4PF</h2>
+                    <span class="product-price"></span>
+                </li>
+                <li>
+                    <img src="../assets/images/star.png" alt="">
+                    <img src="../assets/images/star.png" alt="">
+                    <img src="../assets/images/star.png" alt="">
+                    <img src="../assets/images/star.png" alt="">
+                    <img src="../assets/images/star.png" alt="">
+                    <div class="ratings">
+                        <p class="item-rating">250 Ratings</p>
+                    </div>
+                </li>
+                <li class="description">Packed with court-ready tech, the Zion 4 helps power an explosive game. A
+                    full-length Air Zoom unit
+                    and drop-in midsole give you the responsive cushioning your high-energy vertical movements demand.
+                </li>
+                <li class="add-to-cart">
+                    <div id="container">
+                        <p>Quantity</p>
+                        <div id="quantity">
+                            <input type="number" class="quantity" value="0" min="0">
+                            <div id="arrows">
+                                <i class="fa-solid fa-angle-up"></i>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="total-amount">
+                        <p>Total Amount</p>
+                        <p class="price total-amount">$10</p>
+                    </div>
+                    <button id="add-to-cart-button" class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i>Add
+                        to Cart</button>
+                </li>
+                <div id="shoe-details">
+                    <img class="front-view" src="../assets/images/ADIDAS-WOMEN-1.2.avif" alt="">
+                    <img class="side-view" src="../assets/images/ADIDAS-WOMEN-1.2.avif" alt="">
+                    <img class="back-view" src="../assets/images/ADIDAS-WOMEN-1.2.avif" alt="">
+                    <img class="top-view" src="../assets/images/ADIDAS-WOMEN-1.2.avif" alt="">
+                </div>
+            </ul>
+        </section>
+        <section class="other-shoes-section">
+            <!-- <ul class="other-shoes">
+                <li><img src="../assets/images/ADIDAS-WOMEN-1.2.avif" alt="shoe image"></li>
+                <div class="other-shoes-details">
+                    <li>Nike Vomero 19</li>
+                    <div>
+                        <li id="star"><img src="../assets/images/star.png" alt=""><img src="../assets/images/star.png"
+                                alt=""><img src="../assets/images/star.png" alt=""><img src="../assets/images/star.png"
+                                alt=""><img src="../assets/images/star.png" alt="">
+                        </li>
+                        <p>36 Rating</p>
+                        <span>$10</span>
+                    </div>
+                </div>
+            </ul> -->
+        </section>
+    </main>
+
+    <dialog class="login-form">
+        <div class="container">
+            <section>
+                <header>
+                    <img src="../assets/images/Nike-Logo.png" alt="">
+                    <button class="close-form-btn">X</button>
+                </header>
+                <ul>
+                    <li>
+                        <i class="fa-regular fa-face-smile"></i>
+                        <p>Login to order</p>
+                    </li>
+                    <li>
+                        <button class="signup-modal-btn">New Member? Register here.</button>
+                    </li>
+                </ul>
+                <form>
+                    <li>
+                        <p>Email</p>
+                        <input type="email" placeholder="Email Address" id="email_login">
+                    </li>
+                    <li>
+                        <input type="password" placeholder="Password" id="password_login">
+                    </li>
+                    <button class="submit-btn">Sign In</button>
+                </form>
+            </section>
+        </div>
+    </dialog>
+
+    <dialog class="signup-form">
+        <div class="container">
+            <section>
+                <header>
+                    <img src="../assets/images/Nike-Logo.png" alt="">
+                    <button class="close-signup-btn">X</button>
+                </header>
+                <ul>
+                    <li>
+                        <i class="fa-regular fa-face-smile"></i>
+                        <p>Login to order</p>
+                    </li>
+                    <li>
+                        <button class="member-btn">Already a member? Login here.</button>
+                    </li>
+                </ul>
+                <form>
+                    <ul>
+                        <li>
+                            <input type="text" placeholder="Firstname">
+                            <input type="text" placeholder="Firstname">
+                        </li>
+                        <li>
+                            <input type="email" placeholder="Email">
+                        </li>
+                        <li>
+                            <input type="password" placeholder="Password">
+                        </li>
+                        <li>
+                            <input type="password" placeholder="Confirm Password">
+                        </li>
+                    </ul>
+                    <button>Sign Up</button>
+                </form>
+            </section>
+        </div>
+    </dialog>
+
+    <dialog class="cart-action-modal">
+        <div id="addtocart-modal">
+            <ul>
+                <li>
+                    <i class="fa-solid fa-circle-check" id="green-check"></i>
+                    <p>Added to cart successfully!</p>
+                    <i class="fa-solid fa-xmark" id="x-button"></i>
+                </li>
+            </ul>
+        </div>
+    </dialog>
+    <script type="module" src="../js/productView.js"></script>
+</body>
+
+</html>
