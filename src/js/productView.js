@@ -22,17 +22,34 @@ const sideView = document.querySelector(".side-view");
 const backView = document.querySelector(".back-view");
 const topView = document.querySelector(".top-view");
 // initial  render
+
+// data that passed from the url
+const params = new URLSearchParams(window.location.search);
+const itemData = JSON.parse(decodeURIComponent(params.get("data")));
+
 function displayProduct() {
   const params = new URLSearchParams(window.location.search);
   const itemData = JSON.parse(decodeURIComponent(params.get("data")));
-
   //   change the product count
   productCount.textContent = ` << All Products (${products.length})`;
   productName.textContent = `${itemData.itemName}`;
   productPrice.textContent = `${itemData.price}`;
   mainImg.src = itemData.imgSrc[0];
   productRating.textContent = ` ${itemData.ratingCount} Ratings`;
-  productQuantity.setAttribute("max", `${itemData.quantity}`);
+
+  const findDuplicate = loggedUser.cart.find(
+    (product) => product.itemName === itemData.itemName
+  );
+
+  if (findDuplicate && itemData.itemName === findDuplicate.itemName) {
+    productQuantity.setAttribute(
+      "max",
+      itemData.quantity - findDuplicate.quantity
+    );
+  } else {
+    productQuantity.setAttribute("max", itemData.quantity);
+  }
+
   descriptionItem.textContent = itemData.description;
   // attach img to preview
   frontView.src = itemData.imgSrc[0];
@@ -63,21 +80,20 @@ function addCart() {
   }
 
   const id = loggedUser.cart.length;
-  const params = new URLSearchParams(window.location.search);
-  const itemData = JSON.parse(decodeURIComponent(params.get("data")));
-  const findUserIndex = user.findIndex(
-    (users) => users.username === loggedUser.username
-  );
 
   if (Number(productQuantity.value) < 0) {
     return alert("Please type a valid number");
   }
 
-  user[findUserIndex] = loggedUser;
+  const findUserIndex = user.findIndex(
+    (users) => users.username === loggedUser.username
+  );
 
   const findDuplicate = user[findUserIndex].cart.find(
     (product) => product.itemName === itemData.itemName
   );
+
+  user[findUserIndex] = loggedUser;
 
   productQuantity.setAttribute(
     "max",
