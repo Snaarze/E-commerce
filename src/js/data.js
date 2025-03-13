@@ -194,40 +194,4 @@ export const products = [
       "../assets/images/ADIDAS-WOMEN-5.4.avif", // Top view
     ],
   },
-
-  //
-  {
-    id: 5,
-    itemName: "Samba OG Shoes",
-    sizes: ["5UK", "6UK", "6.5UK"],
-    price: 6800,
-    quantity: 100,
-    brand: "Adidas",
-    ratingCount: 250,
-    description:
-      "The adidas Samba OG Shoes are a casual icon reimagined for sunny, fair weather days. The breathable cotton mesh upper keeps you cool while suede overlays add structure and durability over the toe and along the laces.",
-    imgSrc: [
-      "../assets/images/ADIDAS-MEN-5.avif", // Front view
-      "../assets/images/ADIDAS-MEN-5.2.avif", // Side view
-      "../assets/images/ADIDAS-MEN-5.3.avif", // Back view
-      "../assets/images/ADIDAS-MEN-5.4.avif", // Top view
-    ],
-  },
-  {
-    id: 5,
-    itemName: "Samba OG Shoes",
-    sizes: ["5UK", "6UK", "6.5UK"],
-    price: 6800,
-    quantity: 100,
-    brand: "Adidas",
-    ratingCount: 250,
-    description:
-      "The adidas Samba OG Shoes are a casual icon reimagined for sunny, fair weather days. The breathable cotton mesh upper keeps you cool while suede overlays add structure and durability over the toe and along the laces.",
-    imgSrc: [
-      "../assets/images/ADIDAS-MEN-5.avif", // Front view
-      "../assets/images/ADIDAS-MEN-5..avif", // Side view
-      "../assets/images/ADIDAS-MEN-5.3.avif", // Back view
-      "../assets/images/ADIDAS-MEN-5.4.avif", // Top view
-    ],
-  },
 ];

@@ -8,7 +8,9 @@ const cartCount = document.querySelector(".cart-count");
 const findUserIndex = user.findIndex(
   (users) => loggedUser && users.username === loggedUser.username
 );
-
+const closeBtn = document.querySelector("#x-button");
+const checkoutBtn = document.querySelector(".checkout-btn");
+const paymentModal = document.querySelector(".payment-modal");
 function displayUserCart() {
   user[findUserIndex] = loggedUser;
   updateCartCount();
@@ -154,5 +156,13 @@ function updateOrderSummary() {
   totalItemsAmount.textContent = "$0";
   shippingFee.textContent = "$0";
 }
+
+checkoutBtn.addEventListener("click", () => {
+  paymentModal.showModal();
+});
+
+closeBtn.addEventListener("click", () => {
+  paymentModal.close();
+});
 
 displayUserCart();
