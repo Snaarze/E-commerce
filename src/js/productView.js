@@ -36,10 +36,13 @@ function displayProduct() {
   productPrice.textContent = `${itemData.price}`;
   mainImg.src = itemData.imgSrc[0];
   productRating.textContent = ` ${itemData.ratingCount} Ratings`;
+  console.log(loggedUser);
 
-  const findDuplicate = loggedUser.cart.find(
+  const findDuplicate = loggedUser?.cart.find(
     (product) => product.itemName === itemData.itemName
   );
+
+  console.log(loggedUser);
 
   if (findDuplicate && itemData.itemName === findDuplicate.itemName) {
     productQuantity.setAttribute(
@@ -58,14 +61,18 @@ function displayProduct() {
   backView.src = itemData.imgSrc[3];
 
   productQuantity.addEventListener("input", (e) => {
-    const changeLimitValue = loggedUser.cart.find(
-      (item) => item.itemName === itemData.itemName
-    );
-
     if (Number(e.target.value) > Number(e.target.getAttribute("max"))) {
       productQuantity.value = Number(e.target.getAttribute("max"));
     }
   });
+
+  const maxValue = Number(productQuantity.getAttribute("max"));
+
+  if (maxValue < 1) {
+    addCartBtn.disabled = true;
+    productQuantity.value = 0;
+    productQuantity.disabled = true;
+  }
 
   createSimilarItems(itemData);
 
@@ -89,29 +96,13 @@ function addCart() {
     (users) => users.username === loggedUser.username
   );
 
+  user[findUserIndex] = loggedUser;
+
   const findDuplicate = user[findUserIndex].cart.find(
     (product) => product.itemName === itemData.itemName
   );
 
-  user[findUserIndex] = loggedUser;
-
-  productQuantity.setAttribute(
-    "max",
-    itemData.quantity - Number(productQuantity.value)
-  );
-
-  if (
-    findDuplicate &&
-    findDuplicate.quantity + Number(productQuantity.value) > itemData.quantity
-  ) {
-    addCartBtn.setAttribute("disabled", "disabled");
-    return;
-  }
   if (!findDuplicate) {
-    // if (itemData.quantity > findDuplicate.quantity) {
-    //   return alert("You have exceeded the Maximum amount to cart");
-    // }
-
     user[findUserIndex].cart.push({
       id: id,
       itemName: itemData.itemName,
@@ -129,11 +120,31 @@ function addCart() {
       productQuantity.value
     );
   }
+  productQuantity.setAttribute(
+    "max",
+    Number(productQuantity.getAttribute("max")) - Number(productQuantity.value)
+  );
+
+  const maxValue = Number(productQuantity.getAttribute("max"));
+
+  if (maxValue < 1) {
+    addCartBtn.disabled = true;
+    productQuantity.value = 0;
+    productQuantity.disabled = true;
+  }
+
+  if (Number(productQuantity.value) > maxValue) {
+    productQuantity.value = maxValue;
+  }
 
   localStorage.setItem("user", JSON.stringify(user[findUserIndex]));
 
   cartCount.textContent = `Cart (${user[findUserIndex].cart.length})`;
   cartActionModal.showModal();
+
+  if (Number(productQuantity.value) > maxValue) {
+    productQuantity.value = maxValue;
+  }
 
   setTimeout(() => {
     cartActionModal.close();
