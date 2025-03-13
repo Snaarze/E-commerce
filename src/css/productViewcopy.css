@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    font-family: 'Inter', sans-serif;;
+    width: 100%;
+}
+
+aside {
+    padding: 30px;
+    min-height: 100vh;
+    background: #1C304F;
+}
+
+aside ul li img {
+    width: 100px;
+}
+
+aside ul {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    li {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+main {
+    margin: 50px;
+    width: 90%;
+}
+
+main header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main header div {
+    gap: 30px;
+    display: flex;
+}
+
+main header div form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 0px 0px 0.3px;
+    width: 350px;
+}
+
+main header div form input {
+    border-style: none;
+    width: 100%;
+}
+
+main header div button {
+    background: #1C304F;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.product-details {
+    display: flex;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin-top: 40px;
+    gap: 30px;
+}
+
+.product-details .product-img {
+    border-radius: 10px;
+    height: 450px;
+    width: auto;
+}
+
+.product-details ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-details ul .add-to-cart {
+    display: flex;
+    gap: 80px;
+    padding-top: 20px;
+    align-items: center;
+}
+
+.product-details ul li {
+    list-style: none;
+    display: flex;
+}
+
+.product-details ul li #container {
+    display: flex;
+    flex-direction: column;
+}
+
+#quantity {
+    display: flex;
+    gap: 10px;
+}
+
+#quantity input {
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #1C304F;
+}
+
+#arrows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-details ul li img {
+    width: 20px;
+}
+
+#shoe-details {
+    display: flex;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+#shoe-details img{
+    border-radius: 10px;
+    width: 200px;
+}
+
+#total-amount .price {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #1C304F;
+    align-items: center;
+    text-align: center;
+}
+
+#add-to-cart-button {
+    padding: 10px;
+    background-color: #1C304F;
+    border-radius: 10px;
+    color: white;
+}
+
+.other-shoes {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 20px;
+    margin: 40px;
+}
+
+.other-shoes li {
+    display: flex;
+}
+
+.other-shoes-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.other-shoes-details div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.other-shoes-details span {
+    background: #1C304F;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.other-shoes li img {
+    display: flex;
+    flex: 1;
+    width: 200px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#star img{
+    width: 20px;
+}
+
+.other-shoes-section {
+    display: flex;
+}

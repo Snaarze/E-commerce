@@ -23,6 +23,10 @@ main {
   width: auto;
 }
 
+main a span i{
+  font-size: 15px;
+}
+
 main > section:last-child {
   margin-top: 50px;
 }
@@ -40,11 +44,11 @@ main,
 .product-right-container ul,
 .product-right-container li:not(:last-child) {
   display: flex;
+  gap: 10px;
 }
 
 .product-container {
   height: 400px;
-  margin-right: 300px;
 }
 
 .product-left-container div {
@@ -60,7 +64,7 @@ main,
 .product-left-container {
   flex: 2;
   gap: 20px;
-  padding-right: 100px;
+  padding: 60px;
   justify-content: center;
   align-items: center;
 }
@@ -83,7 +87,6 @@ main,
 }
 
 .product-left-container div {
-  margin-bottom: 50px;
   gap: 15px;
 }
 
@@ -98,7 +101,9 @@ main,
 
 #quantity {
   width: 50px;
-  padding: 15px 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid gray;
 }
 
 .item-info-container {
