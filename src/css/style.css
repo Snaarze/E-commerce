@@ -3,6 +3,22 @@
   padding: 0;
 }
 
+.hide-btn {
+  display: none !important;
+}
+
+.logged-container {
+  display: flex;
+}
+
+dialog {
+  position: fixed;
+  top: 5%;
+  left: 35%;
+  border: none;
+  border-radius: 25px;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -27,7 +43,9 @@ img {
   display: block;
 }
 
-button {
+button.signup-btn,
+.login-btn,
+button.add-to-cart-btn {
   padding: 10px 15px;
   border: none;
   background-color: darkblue;
@@ -36,7 +54,7 @@ button {
   border-radius: 5px;
 }
 
-input[type="text"] {
+form.form-title input[type="text"] {
   margin: 30px 0px 30px 30px;
   padding: 10px;
   border: 1px solid #ddd;
@@ -73,7 +91,7 @@ input[type="text"] {
   height: auto;
 }
 
-header {
+.header-title {
   background-color: #ffffff;
   color: black;
   padding: 10px;
@@ -99,7 +117,7 @@ header li img {
   margin-right: 10px;
 }
 
-form {
+form.form-title {
   padding: 10px 20px;
   margin-left: 51px;
   display: flex;
@@ -108,17 +126,17 @@ form {
   background-color: #f3f8fd;
 }
 
-form ul {
+form.form-title ul {
   display: flex;
   align-items: center;
 }
 
-form li {
+form.form-title li {
   display: flex;
   align-items: center;
 }
 
-form img {
+form.form-title img {
   width: 20px;
   height: 20px;
   margin: 0 10px;
@@ -177,6 +195,7 @@ main {
   align-items: center;
   background-color: #ffffff;
   text-align: center;
+  cursor: pointer;
 }
 
 .categories img {
@@ -231,7 +250,7 @@ main {
   text-align: center;
   border-radius: 20px;
   padding-top: 10px;
-  width: 50px;
+  min-width: 80px;
   height: 25px;
   background-color: #f0f0f0;
   color: #8079da;
@@ -250,7 +269,9 @@ main {
 }
 
 .product-img {
+  flex-basis: 300px;
   background-color: #edeef2;
+  max-height: 300px;
 }
 
 .star {
@@ -270,4 +291,29 @@ main {
 .left-container {
   display: flex;
   flex-direction: column;
+}
+
+input:invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+/* error message styles */
+.validation-text {
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  font-size: 80%;
+  color: red;
+  border-radius: 0 0 5px 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.validation-text.active {
+  padding: 0.3em;
 }

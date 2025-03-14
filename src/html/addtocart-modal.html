@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/addtocart-modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Add to cart modal -->
+    <div id="addtocart-modal">
+        <ul>
+            <li>
+                <i class="fa-solid fa-circle-check" id="green-check"></i>
+                <p>Added to cart successfully!</p>
+                <i class="fa-solid fa-xmark" id="x-button"></i>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Delete cart item -->
+    <div id="delete-cart-item-modal">
+        <ul>
+            <li>
+                <p>Are you sure you want to remove this item?</p>
+            </li>
+            <li>
+                <button id="cancel-btn">Cancel</button>
+                <button id="remove-btn">Remove</button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Proceed to Checkout modal -->
+    <div id="checkout-modal">
+        <ul>
+            <li id="header">
+                <div>
+                    <img src="../assets/images/Nike-Logo.png" alt="">
+                    <img src="" alt="Visa logo">
+                    <img src="" alt="mastercard logo">
+                </div>
+                <i class="fa-solid fa-xmark" id="x-button"></i>
+            </li>
+            <li>
+                <p class="card-details">Card Details</p>
+            </li>
+            <li>
+                <input type="text" placeholder="Card Name">
+            </li>
+            <li>
+                <input type="text" placeholder="Card Number">
+            </li>
+            <li>
+                <input type="text" placeholder="Expiration">
+                <input type="text" placeholder="CVC">
+            </li>
+            <li class="total-amount">
+                <p>Total Amount <span>$45</span></p>
+            </li>
+            <button>Pay</button>
+        </ul>
+    </div>
+</body>
+
+</html>

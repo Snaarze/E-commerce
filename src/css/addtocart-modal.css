@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#addtocart-modal ul li {
+    gap: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#addtocart-modal ul li p {
+    padding-right: 50px;
+}
+
+#green-check {
+    font-size: 30px;
+    color: green;
+}
+
+#x-button {
+    color: red;
+}
+
+/* delete-cart-item-modal */
+
+#delete-cart-item-modal ul{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#delete-cart-item-modal ul li {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#cancel-btn {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px gray solid;
+    background-color: white;
+}
+
+#remove-btn {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px red solid;
+    background-color: white;
+    color: red;
+}
+
+
+
+/* Checkout Modal */
+#checkout-modal #header {
+    margin: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#checkout-modal #header div {
+    display: flex;
+}
+
+#checkout-modal ul li img{
+    width: 80px;
+}
+
+#checkout-modal ul {
+    margin: 40px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#checkout-modal ul button {
+    background-color: #9C89FF;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-weight: bold;
+    color: white;
+}
+
+#checkout-modal ul li {
+    gap: 10px;
+    display: flex;
+}
+
+#checkout-modal ul li .card-details {
+    font-weight: bold;
+}
+
+#checkout-modal ul .total-amount {
+    display: flex;
+    justify-content: end;
+}
+
+#checkout-modal ul li input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+

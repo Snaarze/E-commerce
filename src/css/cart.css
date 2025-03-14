@@ -1,243 +1,387 @@
 * {
-    padding: 0;
-    /* outline: 1px dotted red; */
-    margin: 0;
+  padding: 0;
+  /* outline: 1px dotted red; */
+  margin: 0;
+}
+
+.hide-btn {
+  display: none;
+}
+
+button.signup-btn,
+.login-btn {
+  margin-right: 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color: darkblue;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 body {
-    font-family: sans-serif;
-    display: flex;
-    background-color: #F3F8FD;
+  font-family: sans-serif;
+  display: flex;
+  background-color: #f3f8fd;
 }
 
 aside {
-    box-shadow: 0px 0px 0px 0.1px;
-    height: 100vh;
-    background-color: #ffffff;
+  box-shadow: 0px 0px 0px 0.1px;
+  height: 100vh;
+  background-color: #ffffff;
 }
 
 aside ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 aside ul li {
-    list-style: none;
-    
+  list-style: none;
 }
 
-aside ul li a{
-   color: black;
-    
+aside ul li a {
+  color: black;
 }
 
 aside ul li a i {
-    padding: 10px;
+  padding: 10px;
 }
 
-aside ul li img{
-    padding: 15px;
-    height: auto;
-    width: 50px;
+aside ul li img {
+  padding: 15px;
+  height: auto;
+  width: 50px;
 }
 
 .container {
-    width: 100%;
+  width: 100%;
+}
+
+.no-cart-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+}
+
+.no-cart-item a {
+  border: 1px solid #9c89ff;
+  color: #9c89ff;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+dialog {
+  position: fixed;
+  top: 5%;
+  left: 35%;
+  border: none;
+  border-radius: 25px;
 }
 
 header {
-    box-shadow: 0px 0px 0px 0.1px;
-    background-color: #ffffff;
+  box-shadow: 0px 0px 0px 0.1px;
+  background-color: #ffffff;
+  padding-right: 40px;
 }
 
-header ul{
-    justify-content: space-between;
-    display: flex;
-    padding: 15px 15px 15px 50px;
+header ul {
+  justify-content: space-between;
+  display: flex;
+  padding: 15px 15px 15px 50px;
 }
 
 header ul li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 header ul li img {
-    padding-right: 10px;
-    height: auto;
-    width: 50px;
+  padding-right: 10px;
+  height: auto;
+  width: 50px;
+}
+
+.fb-icon {
+  width: 35px;
 }
 
 form {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 form a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: #9c89ff;
+  color: white;
+  height: 30px;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
-form a button {
-    border-radius: 5px;
-    border-style: none;
-    background-color: #9C89FF;
-    padding: 10px;
-    color: white;
-}
-
-form div{
-    border-radius: 5px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 10px 30px 30px;
+form div {
+  border-radius: 5px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 10px 30px 30px;
 }
 
 form div i {
-    padding: 8px;
+  padding: 8px;
 }
 
-form div input{
-    border-radius: 5px;
-    border: none;
-    padding: 8px;
-    width: 300px;
+form div input {
+  border-radius: 5px;
+  border: none;
+  padding: 8px;
+  width: 300px;
 }
 
 main {
-    display: flex;
-    gap: 50px;
+  display: flex;
+  gap: 50px;
 }
 
 main section {
-    justify-content: space-between;
-    margin: 30px;
-    width: 40%;
+  justify-content: space-between;
+  margin: 30px;
+  width: 40%;
 }
 
 main section ul {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main section ul li div p {
+  max-width: 24ch;
 }
 
 main section ul li {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: white;
-    border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.remove-btn {
+  border: none;
+  background-color: white;
+}
+
+.remove-btn i {
+  font-size: 24px;
+  margin-right: 20px;
+  cursor: pointer;
 }
 
 main section ul li img {
-    height: auto;
-    width: 100px;
+  height: auto;
+  width: 100px;
+}
+
+main section ul li img,
+main section ul li {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 main section ul li div {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 main section ul li i {
-    padding: 10px;
-    color: red;
+  padding: 10px;
+  color: red;
 }
 
 main section ul li div .price {
-    background-color: #F0F0F0;
-    color: #9C89FF;
-    padding: 5px;
-    border-radius: 20px;
-    width: 25px;
-    font-weight: bold;
+  background-color: #f0f0f0;
+  color: #9c89ff;
+  padding: 5px;
+  border-radius: 20px;
+  max-width: 50px;
+  font-weight: bold;
 }
 
-main section ul li div .quantity{
-    font-size: small;
-    color: #7D7D7D;
+main section ul li div .quantity {
+  font-size: small;
+  color: #7d7d7d;
 }
 
 main section ul li div input {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    border: 1px solid #D4E1EC;
-    border-radius: 5px;
-    padding: 15px;
-    width: 80px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #d4e1ec;
+  border-radius: 5px;
+  padding: 15px;
+  width: 80px;
 }
 
 main section ul li div .total-amount {
-    width: 100px;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-    background-color: #F0F0F0;
-    color: #9C89FF;
-    font-weight: bold;
+  width: 100px;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #f0f0f0;
+  color: #9c89ff;
+  font-weight: bold;
 }
 
 main .shipping-information ul {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 main .shipping-information ul div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 main .shipping-information ul li {
-    list-style: none;    
+  list-style: none;
 }
 
 main .shipping-information ul li input {
-    border-style: none;
-    border: 1px solid gray;
-    border-radius: 10px;
-    padding: 10px;
+  border-style: none;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-.order-summary li{
-    display: flex;
-    justify-content: space-between;
+.order-summary li {
+  display: flex;
+  justify-content: space-between;
 }
 
 .order-summary .shipping-fee {
-    padding-bottom: 10px;
-    border-bottom: 1px #E2E2E2 solid;
+  padding-bottom: 10px;
+  border-bottom: 1px #e2e2e2 solid;
 }
 
 main .shipping-information ul a {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .checkout {
-    justify-content: center;
-    display: flex;
-    text-align: center;
-    align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  align-items: center;
 }
 
-.checkout a {
-    justify-content: center;
-    display: flex;
-    border-radius: 10px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    background-color: #9C89FF;
-    padding: 15px;
-    height: auto;
-    width: 100%;
+.checkout button {
+  justify-content: center;
+  display: flex;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  background-color: #9c89ff;
+  padding: 15px;
+  height: auto;
+  width: 100%;
+  border: none;
+}
+
+#checkout-modal #header {
+  margin: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#checkout-modal #header div {
+  display: flex;
+}
+
+#checkout-modal ul li img {
+  height: 30px;
+  width: auto;
+}
+
+#checkout-modal ul {
+  margin: 40px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#checkout-modal ul button {
+  background-color: #9c89ff;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  font-weight: bold;
+  color: white;
+}
+
+#checkout-modal ul li {
+  gap: 10px;
+  display: flex;
+  flex: 1;
+}
+
+#checkout-modal ul li div {
+  display: flex;
+  gap: 30px;
+}
+
+#checkout-modal ul li .card-details {
+  font-weight: bold;
+}
+
+#checkout-modal ul .total-amount {
+  display: flex;
+  justify-content: end;
+}
+
+#checkout-modal ul li input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  flex: 1;
+}
+
+/* log out modal */
+.logout-modal {
+  height: 30px;
+  width: 100px;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.logout-btn {
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  background-color: white;
+}
+
+.account-container {
+  position: relative;
 }
