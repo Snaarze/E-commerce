@@ -8,7 +8,9 @@ const cartCount = document.querySelector(".cart-count");
 const findUserIndex = user.findIndex(
   (users) => loggedUser && users.username === loggedUser.username
 );
-
+const closeBtn = document.querySelector("#x-button");
+const checkoutBtn = document.querySelector(".checkout-btn");
+const paymentModal = document.querySelector(".payment-modal");
 function displayUserCart() {
   user[findUserIndex] = loggedUser;
   updateCartCount();
@@ -73,8 +75,8 @@ function createCartList() {
     const quantityContainer = document.createElement("div");
     const quantityText = document.createElement("p");
     quantityText.classList.add("quantity");
-    const quantityInput = document.createElement("input");
-    quantityInput.value = item.quantity;
+    const quantityInput = document.createElement("p");
+    quantityInput.textContent = item.quantity;
     quantityText.textContent = "Quantity";
 
     quantityContainer.appendChild(quantityText);
@@ -103,12 +105,7 @@ function createCartList() {
     cartListContainer.appendChild(liContainer);
 
     removeButton.addEventListener("click", removeItem);
-    quantityInput.addEventListener("input", updateQuantity);
   });
-}
-
-function updateQuantity(e) {
-  console.log(e.target.value);
 }
 
 function removeItem(e) {
@@ -154,5 +151,13 @@ function updateOrderSummary() {
   totalItemsAmount.textContent = "$0";
   shippingFee.textContent = "$0";
 }
+
+checkoutBtn.addEventListener("click", () => {
+  paymentModal.showModal();
+});
+
+closeBtn.addEventListener("click", () => {
+  paymentModal.close();
+});
 
 displayUserCart();

@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+    align-items: center;
+}
+
+.black-line {
+    width: 50px;
+    height: 0;
+    border: 1px solid black;
+}
+
+header ul {
+    display: flex;
+    gap: 50px;
+}
+
+header ul a {
+    text-decoration: none;
+    color: #1C304F;
+}
+
+header form {
+    gap: 40px;
+    display: flex;
+}
+
+form li {
+    border: gray 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+    list-style: none;
+}
+
+form li input {
+    border-radius: 5px;
+    padding: 5px;
+    width: 400px;
+    border-style: none;
+}
+
+form a {
+    border-radius: 5px;
+    padding: 10px;
+    background: #1C304F;
+    color: white;
+    text-decoration: none;
+}
+
+form button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #1C304F;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 0px 60px 0px;
+    align-items: center;
+}
+
+nav button {
+    background: none;
+    border: 1px solid white;
+}
+
+nav img {
+    width: 100px;
+}
+
+.other-shoes {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 20px;
+    margin: 40px;
+}
+
+.other-shoes li {
+    display: flex;
+}
+
+.other-shoes-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.other-shoes-details div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.other-shoes-details span {
+    background: #1C304F;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.other-shoes li img {
+    display: flex;
+    flex: 1;
+    width: 200px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#star img{
+    width: 20px;
+}
+
+.other-shoes-section {
+    display: flex;
+}

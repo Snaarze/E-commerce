@@ -87,6 +87,7 @@ dialog {
 header {
   box-shadow: 0px 0px 0px 0.1px;
   background-color: #ffffff;
+  padding-right: 40px;
 }
 
 header ul {
@@ -99,12 +100,17 @@ header ul li {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 header ul li img {
   padding-right: 10px;
   height: auto;
   width: 50px;
+}
+
+.fb-icon {
+  width: 35px;
 }
 
 form {
@@ -182,6 +188,7 @@ main section ul li {
 .remove-btn i {
   font-size: 24px;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 main section ul li img {
@@ -285,7 +292,7 @@ main .shipping-information ul a {
   align-items: center;
 }
 
-.checkout a {
+.checkout button {
   justify-content: center;
   display: flex;
   border-radius: 10px;
@@ -296,4 +303,85 @@ main .shipping-information ul a {
   padding: 15px;
   height: auto;
   width: 100%;
+  border: none;
+}
+
+#checkout-modal #header {
+  margin: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#checkout-modal #header div {
+  display: flex;
+}
+
+#checkout-modal ul li img {
+  height: 30px;
+  width: auto;
+}
+
+#checkout-modal ul {
+  margin: 40px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#checkout-modal ul button {
+  background-color: #9c89ff;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  font-weight: bold;
+  color: white;
+}
+
+#checkout-modal ul li {
+  gap: 10px;
+  display: flex;
+  flex: 1;
+}
+
+#checkout-modal ul li div {
+  display: flex;
+  gap: 30px;
+}
+
+#checkout-modal ul li .card-details {
+  font-weight: bold;
+}
+
+#checkout-modal ul .total-amount {
+  display: flex;
+  justify-content: end;
+}
+
+#checkout-modal ul li input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  flex: 1;
+}
+
+/* log out modal */
+.logout-modal {
+  height: 30px;
+  width: 100px;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.logout-btn {
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  background-color: white;
+}
+
+.account-container {
+  position: relative;
 }

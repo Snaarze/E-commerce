@@ -10,10 +10,11 @@
 .login-form header {
   display: flex;
   justify-content: space-between;
+  padding: 10px;
 }
 
 .login-form header img {
-  width: 80px;
+  height: 20px;
 }
 
 .login-form header button {
@@ -32,6 +33,7 @@
 .login-form section ul {
   display: flex;
   justify-content: space-between;
+  padding: 20px;
 }
 
 .login-form section ul li {

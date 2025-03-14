@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -30,9 +31,13 @@
                     <button class="login-btn">Login</button>
                 </li>
                 <li class="hide-btn logged-container">
-                    <img src="" alt="test">
                     <span class="email-logged"></span>
-                    <button class="logout-btn">Log out</button>
+                    <div class="account-container">
+                        <img src="../assets/images/fb-icon.png" alt="test" class="fb-icon">
+                        <dialog open class="logout-modal">
+                            <button class="logout-btn">Log out</button>
+                        </dialog>
+                    </div>
                 </li>
             </ul>
         </header>
@@ -84,7 +89,7 @@
                         </li>
                     </div>
                     <div class="checkout">
-                        <a href="">Proceed to Checkout</a>
+                        <button href="" class="checkout-btn">Proceed to Checkout</button>
                     </div>
                 </ul>
             </div>
@@ -109,10 +114,11 @@
                     <form>
                         <li>
                             <p>Email</p>
-                            <input type="text" placeholder="Email Address" id="email_login">
+                            <span class="validation-text"></span>
+                            <input type="email" placeholder="Email Address" id="email_login">
                         </li>
                         <li>
-                            <input type="text" placeholder="Password" id="password_login">
+                            <input type="password" placeholder="Password" id="password_login">
                         </li>
                         <button class="submit-btn">Sign In</button>
                     </form>
@@ -155,6 +161,38 @@
                         <button>Sign Up</button>
                     </form>
                 </section>
+            </div>
+        </dialog>
+
+        <dialog class="payment-modal">
+            <div id="checkout-modal">
+                <ul>
+                    <li id="header">
+                        <div>
+                            <img src="../assets/images/Nike-Logo.png" alt="">
+                            <img src="../assets/images/visa-logo.png" alt="Visa logo">
+                            <img src="../assets/images/mastercard-logo.png" alt="mastercard logo">
+                        </div>
+                        <i class="fa-solid fa-xmark" id="x-button"></i>
+                    </li>
+                    <li>
+                        <p class="card-details">Card Details</p>
+                    </li>
+                    <li>
+                        <input type="text" placeholder="Card Name">
+                    </li>
+                    <li>
+                        <input type="text" placeholder="Card Number">
+                    </li>
+                    <li>
+                        <input type="text" placeholder="Expiration">
+                        <input type="text" placeholder="CVC">
+                    </li>
+                    <li class="total-amount">
+                        <p>Total Amount <span>$45</span></p>
+                    </li>
+                    <button>Pay</button>
+                </ul>
             </div>
         </dialog>
     </div>
